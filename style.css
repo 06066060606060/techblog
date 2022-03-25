@@ -65,9 +65,5 @@ bouton {
   color: aliceblue;
 }
 retour {
-  position: absolute;
-  margin-top: -40px;
   color: aliceblue;
-  left: 11%;
-  top: 20%;
 }
