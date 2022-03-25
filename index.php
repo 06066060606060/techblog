@@ -1,7 +1,10 @@
 <?php
+
 $bdd = new PDO("mysql:host=localhost;dbname=articles;charset=utf8", "root", "");
 $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_publication DESC');
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +18,9 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_publication D
     <link rel="stylesheet" href="style2.css">
 </head>
 
-
 <body>
-<header>
-            <span class="welcom">Liste des Articles</span>
+    <header>
+        <span class="welcom">Liste des Articles</span>
     </header>
     <article>
         <ul>
@@ -27,9 +29,24 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_publication D
             <?php } ?>
         </ul>
         <button>
-        <a href="ecrire.php"><input class="w3-button w3-ripple w3-red" type="submit" value="Rédiger un article" />
+            <a href="ecrire.php"><input class="w3-button w3-ripple w3-red" type="submit" value="Rédiger un article" /></a>
         </button>
+
+        
+   <h2 style="color: white;"> <?php
+    $con = mysqli_connect("localhost", "root", "", "articles");
+    // Check connection
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    } else {
+        echo "Database found";
+    }
+    ?>
+</h2>
     </article>
+    <footer>
+
+    </footer>
 
 </body>
 

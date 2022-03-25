@@ -60,7 +60,8 @@ body {
 /* image des posts */
 .postimage {
   background-color: rgb(155, 59, 59);
-  width: 100%;
+  width: 80%;
+
   padding: 20px;
 
 }
