@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
 
-html{
+html {
   background-color: black;
 }
 
 body {
- 
-  font-family: Arial;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: "Share Tech", sans-serif;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -19,9 +21,19 @@ body {
   background: #010a26;
 }
 
-/* Header */
-.header {
-  text-align: center;
+.header{
+  position: relative;
+}
+
+.header h1 {
+  font-family: "Share Tech", sans-serif;
+  z-index: 2;
+  position: absolute;
+  font-weight: 600;
+  top: 40%;
+  left: 20%;
+  color: white;  /*  TODO */
+
 }
 
 .header img {
@@ -33,7 +45,6 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   backdrop-filter: blur(10px);
-
 }
 
 .header h1 {
@@ -45,7 +56,7 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding:10px;
+  padding: 10px;
 }
 
 /* button menu */
@@ -54,11 +65,11 @@ body {
   position: relative;
   float: left;
   display: block;
-  color:rgba(0, 80, 252, 0.829);
+  color: rgba(0, 80, 252, 0.829);
   text-align: center;
   text-decoration: none;
-  border-radius:8px;
-  padding:4px;
+  border-radius: 8px;
+  padding: 4px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 8px;
@@ -71,20 +82,24 @@ body {
 /* couleur menu au survol */
 .topnav a:hover {
   border: 1px solid rgba(0, 80, 252, 0.76);
-  color:rgb(0, 80, 252);
+  color: rgb(0, 80, 252);
 }
 
 /* Footer */
 .footer {
+  z-index: 1;
+  position: relative;
   color: white;
   padding: 20px;
   text-align: center;
-  background:rgba(114, 83, 176, 0.28);
+  background: rgba(114, 83, 176, 0.28);
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   margin-top: 20px;
 }
 
 .footer:hover {
+
   border: 1px solid rgba(0, 80, 252, 0.72);
+  backdrop-filter: blur(10px);
 }
