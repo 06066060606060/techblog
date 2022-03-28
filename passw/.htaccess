@@ -1,6 +1,0 @@
-<FilesMatch "admin.php">
-AuthName "contenu protégé"
-AuthType Basic
-AuthUserFile "C:\xampp\htdocs\passw\.htpasswd"
-Require valid-user
-</FilesMatch>
