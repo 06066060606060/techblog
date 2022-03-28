@@ -24,12 +24,18 @@
   background: rgba(114, 83, 176, 0.28);
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgb(0, 80, 252);
+  border: 1px solid rgba(0, 80, 252, 0.418);
   padding: 40px;
   margin-top: 10px;
 }
+
+.container:hover {
+  border: 1px solid rgba(0, 80, 252, 0.72);
+}
 /* colonne droite*/
 .colonedroite {
+  position: sticky;
+  top:0;
   margin-top: 100px;
   float: left;
   width: 25%;

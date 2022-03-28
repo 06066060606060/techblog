@@ -21,17 +21,18 @@ body {
 
 /* Header */
 .header {
-
   text-align: center;
-
 }
+
 .header img {
   z-index: 1;
+  opacity: 80%;
   position: relative;
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
-  border: 1px solid rgb(0, 80, 252);
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  backdrop-filter: blur(10px);
 
 }
 
@@ -53,7 +54,7 @@ body {
   position: relative;
   float: left;
   display: block;
-  color:rgb(0, 80, 252);
+  color:rgba(0, 80, 252, 0.829);
   text-align: center;
   text-decoration: none;
   border-radius:8px;
@@ -62,13 +63,15 @@ body {
   padding-right: 20px;
   margin: 8px;
   border-radius: 10px;
-  border: 1px solid rgb(0, 80, 252);
-  background: #010a26;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  background: #010a2654;
+  backdrop-filter: blur(10px);
 }
 
 /* couleur menu au survol */
 .topnav a:hover {
-  background-color: rgba(114, 83, 176, 0.59);
+  border: 1px solid rgba(0, 80, 252, 0.76);
+  color:rgb(0, 80, 252);
 }
 
 /* Footer */
@@ -78,6 +81,10 @@ body {
   text-align: center;
   background:rgba(114, 83, 176, 0.28);
   border-radius: 10px;
-  border: 1px solid rgb(0, 80, 252);
+  border: 1px solid rgba(0, 80, 252, 0.418);
   margin-top: 20px;
+}
+
+.footer:hover {
+  border: 1px solid rgba(0, 80, 252, 0.72);
 }
