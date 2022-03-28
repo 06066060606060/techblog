@@ -1,0 +1,106 @@
+/* colonne principale 75% */
+.colonegauche {
+  margin-top: 100px;
+  float: left;
+  width: 75%;
+  padding-left:10px;
+}
+.colonegauche p{
+  text-align: center;
+  margin-top: 20px;
+  min-width: 400px;
+}
+
+/* image des posts */
+.postimage {
+  background-color: rgb(114, 114, 114);
+  width: 100%;
+  padding: 20px;
+}
+/* contenair des posts*/
+.container {
+  text-align: center;
+  color: white;
+  background: rgba(114, 83, 176, 0.28);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgb(0, 80, 252);
+  padding: 40px;
+  margin-top: 10px;
+}
+/* colonne droite*/
+.colonedroite {
+  margin-top: 100px;
+  float: left;
+  width: 25%;
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+.colonedroite h2 {
+  position: relative;
+  margin-bottom: 60px;
+  color: rgb(255, 255, 255);
+}
+
+.colonedroite p {
+  position: relative;
+
+  color: rgb(248, 248, 248);
+}
+
+.colonedroite h3 {
+  position: relative;
+  margin-bottom: 70px;
+  color: rgb(255, 255, 255);
+  margin: 10px;
+}
+
+/* image aboutme */
+.img1 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(2, 46, 102);
+  border-radius: 100%;
+  width: 80px;
+  max-height: 80px;
+  padding: 20px;
+}
+
+/* image ancien post */
+.img2 {
+  position: relative;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: rgb(2, 102, 44);
+  width: 80px;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+.img3 {
+  position: relative;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: rgb(99, 2, 102);
+  width: 80px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.img4 {
+  position: relative;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: rgb(208, 167, 4);
+  width: 80px;
+  padding: 20px;
+}
+
+/* contenu vide apres le dernier post*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

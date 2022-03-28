@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html{
+  background-color: black;
+}
+
+body {
+ 
+  font-family: Arial;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  min-width: 300px;
+  background: #010a26;
+}
+
+/* Header */
+.header {
+
+  text-align: center;
+
+}
+.header img {
+  z-index: 1;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 80, 252);
+
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* barre de menu */
+.topnav {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding:10px;
+}
+
+/* button menu */
+.topnav a {
+  z-index: 1;
+  position: relative;
+  float: left;
+  display: block;
+  color:rgb(0, 80, 252);
+  text-align: center;
+  text-decoration: none;
+  border-radius:8px;
+  padding:4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 8px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 80, 252);
+  background: #010a26;
+}
+
+/* couleur menu au survol */
+.topnav a:hover {
+  background-color: rgba(114, 83, 176, 0.59);
+}
+
+/* Footer */
+.footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  background:rgba(114, 83, 176, 0.28);
+  border-radius: 10px;
+  border: 1px solid rgb(0, 80, 252);
+  margin-top: 20px;
+}

@@ -4,18 +4,15 @@ $bdd = new PDO("mysql:host=localhost;dbname=articles;charset=utf8", "root", "");
 $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_publication DESC');
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article</title>
-    <link rel="stylesheet" href="style2.css">
+
 </head>
 
 <body>
@@ -25,24 +22,30 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_publication D
     <article>
         <ul>
             <?php while ($a = $articles->fetch()) { ?>
-                <li><a href="lire.php?id=<?= $a['id'] ?>"><?= $a['titre'] ?></li>
+                <li>
+                    <img src="miniatures/<?= $a['id'] ?>.jpg" width="100" /> </br>
+                <a href="lire.php?id=<?= $a['id'] ?>"><?= $a['titre'] ?></br>
+                    <a href="ecrire.php?edit=<?= $a['id'] ?>"> Modifier</a></br>
+                    <a href="suppr.php?id=<?= $a['id'] ?>"> Supprimer</a></br>
+                   <span>&#8205; </span>
+                </li>
             <?php } ?>
         </ul>
         <button>
-            <a href="ecrire.php"><input class="w3-button w3-ripple w3-red" type="submit" value="Rédiger un article" /></a>
+            <a href="ecrire.php"><input type="submit" value="Rédiger un article" /></a>
         </button>
 
-        
-   <h2 style="color: white;"> <?php
-    $con = mysqli_connect("localhost", "root", "", "articles");
-    // Check connection
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    } else {
-        echo "Database found";
-    }
-    ?>
-</h2>
+
+        <h2 style="color: black;"> <?php
+                                    $con = mysqli_connect("localhost", "root", "", "articles");
+                                    // Check connection
+                                    if (mysqli_connect_errno()) {
+                                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                                    } else {
+                                        echo "Database found";
+                                    }
+                                    ?>
+        </h2>
     </article>
     <footer>
 
