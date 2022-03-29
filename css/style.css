@@ -6,6 +6,11 @@
   padding: 0px;
 }
 
+*::selection{
+  background-color: rgb(65, 48, 107);
+  color: white;
+}
+
 html {
   background-color: black;
 }
@@ -83,6 +88,10 @@ body {
 .topnav a:hover {
   border: 1px solid rgba(0, 80, 252, 0.905);
   color: rgb(0, 80, 252);
+}
+
+.fa-brands{
+  padding: 10px;
 }
 
 /* Footer */

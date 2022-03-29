@@ -31,4 +31,9 @@
     margin: 10px;
     left: 20%;
   }
+
+  .fa-brands{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
