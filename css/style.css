@@ -81,7 +81,7 @@ body {
 
 /* couleur menu au survol */
 .topnav a:hover {
-  border: 1px solid rgba(0, 80, 252, 0.76);
+  border: 1px solid rgba(0, 80, 252, 0.905);
   color: rgb(0, 80, 252);
 }
 
