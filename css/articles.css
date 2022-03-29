@@ -18,10 +18,12 @@
 
 .colonegauche h5 {
   font-family: "Share Tech", sans-serif;
+
 }
 
 /* image des posts */
 .imgpost {
+  padding: 10px;
   width: 100%;
  
 }
@@ -34,7 +36,7 @@
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   padding: 40px;
-  margin-top: 10px;
+  margin-top: 20px; 
 }
 
 .container:hover {

@@ -1,51 +1,52 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=articles;charset=utf8", "root", "");
+$bdd = new PDO("mysql:host=localhost;dbname=mysocial;charset=utf8", "root", "");
 $mode_edition = 0;
 
 
 // edit article
-if (isset($_GET['edit']) and !empty($_GET['edit'])) {
-    $mode_edition = 1;
-    $edit_id = htmlspecialchars($_GET['edit']);
-    $edit_article = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
-    $edit_article->execute(array($edit_id));
-    if ($edit_article->rowCount() == 1) {
+//if (isset($_GET['edit']) and !empty($_GET['edit'])) {
+ //   $mode_edition = 1;
+//    $edit_id = htmlspecialchars($_GET['edit']);
+ //   $edit_article = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
+ //   $edit_article->execute(array($edit_id));
+ //   if ($edit_article->rowCount() == 1) {
 
-        $edit_article = $edit_article->fetch();
-    } else {
-        die('l\'article concerné n\'existe pas...');
-    }
-}
+//        $edit_article = $edit_article->fetch();
+ //   } else {
+ //       die('l\'article concerné n\'existe pas...');
+ //   }
+//}
 
 
 // creer article
 
-if (isset($_POST['article_titre'], $_POST['article_contenu'])) {
-    if (!empty($_POST['article_titre']) and !empty($_POST['article_contenu'])) {
-        $article_titre = htmlspecialchars($_POST['article_titre']);
-        $article_contenu = htmlspecialchars($_POST['article_contenu']);
+if (isset($_POST['titre'], $_POST['contenu'])) {
+    if (!empty($_POST['titre']) and !empty($_POST['contenu'])) {
+        $article_titre = htmlspecialchars($_POST['titre']);
+        $article_contenu = htmlspecialchars($_POST['contenu']);
 
         if ($mode_edition == 0) {
 
-            $ins = $bdd->prepare('INSERT INTO articles (titre, contenu, date_time_publication) VALUES (?, ?, NOW())');
+            $ins = $bdd->prepare('INSERT INTO mysocial (titre, contenu, date_time) VALUES (?, ?, NOW())');
             $ins->execute(array($article_titre, $article_contenu));
             $lastid = $bdd->lastInsertId();
 
-            if (isset($_FILES['miniature']) and !empty($_FILES['miniature']['name'])) {
-                if (exif_imagetype($_FILES['miniature']['tmp_name']) == 2) {
-                    $chemin = 'miniatures/' . $lastid . '.jpg';
-                    move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
-                } else {
-                    $message = 'format jpg uniquement';
-                }
-            }
+         //   if (isset($_FILES['miniature']) and !empty($_FILES['miniature']['name'])) {
+          //      if (exif_imagetype($_FILES['miniature']['tmp_name']) == 2) {
+          //          $chemin = 'miniatures/' . $lastid . '.jpg';
+         //           move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
+         //       } else {
+        //            $message = 'format jpg uniquement';
+        //        }
+       //     }
 
 
             $message = 'Article Posté';
         } else {
-            $update = $bdd->prepare('UPDATE articles SET titre = ?, contenu = ?, date_time_edition = NOW() WHERE ID = ?');
-            $update->execute(array($article_titre, $article_contenu, $edit_id));
-            header('location: lire.php?id=' . $edit_id);
+           // $update = $bdd->prepare('UPDATE articles SET titre = ?, contenu = ?, date_time_edition = NOW() WHERE ID = ?');
+         //   $update->execute(array($article_titre, $article_contenu, $edit_id));
+           // header('location: lire.php?id=' . $edit_id);
+           echo "erreur post";
         }
     } else {
 
@@ -72,22 +73,21 @@ if (isset($_POST['article_titre'], $_POST['article_contenu'])) {
 
     <form method="POST" enctype="multipart/form-data">
 
-        <input type="text" name="article_titre" placeholder="titre" <?php if ($mode_edition == 1) {  ?> value="<?=
-                                                                                                                $edit_article['titre'] ?>" <?php } ?></br>
-        <textarea name="article_contenu" placeholder="Contenu de l'article">
+        <input type="text" name="titre" placeholder="titre" <?php if ($mode_edition == 1) {  ?> value="<?= $edit_article['titre'] ?>" <?php } ?></br>
+        <textarea name="contenu" placeholder="Contenu de l'article">
         <?php if ($mode_edition == 1) {  ?><?=
                                             $edit_article['contenu'] ?><?php } ?> </textarea></br>
         <?php if ($mode_edition == 0) {  ?>
-            <input type="file" name="miniature" /> </br>
+            <!-- <input type="file" name="miniature" /> </br> -->
         <?php } ?>
 
 
         <input type="submit" value="Envoyer l'article" />
 
     </form>
-    <a href="/index.php">liste des articles</a>
+    <!-- <a href="/index.php">liste des articles</a> -->
     <retour>
-        <p style="color: white;"><?php if (isset($message)) {
+        <p style="color: black;"><?php if (isset($message)) {
                                         echo $message;
                                     } ?></p>
     </retour>

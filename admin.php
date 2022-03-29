@@ -1,1 +1,0 @@
-<?= realpath('admin.php');

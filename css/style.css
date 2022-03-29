@@ -11,8 +11,13 @@
   color: white;
 }
 
+
 html {
   background-color: black;
+}
+
+.error{
+  color: white;
 }
 
 body {
