@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=mysocial;charset=utf8", "root", "");
+include './bdd.php';
 if (isset($_GET['id']) and !empty($_GET['id'])) {
     $suppr_id = htmlspecialchars($_GET['id']);
 

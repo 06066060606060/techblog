@@ -1,58 +1,6 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=mysocial;charset=utf8", "root", "");
-$mode_edition = 0;
-
-
-// edit article
-if (isset($_GET['edit']) and !empty($_GET['edit'])) {
-    $mode_edition = 1;
-    $edit_id = htmlspecialchars($_GET['edit']);
-    $edit_article = $bdd->prepare('SELECT * FROM mysocial WHERE id = ?');
-    $edit_article->execute(array($edit_id));
-    if ($edit_article->rowCount() == 1) {
-
-        $edit_article = $edit_article->fetch();
-    } else {
-        die('l\'article concerné n\'existe pas...');
-    }
-}
-
-
-// creer article
-
-if (isset($_POST['titre'], $_POST['contenu'])) {
-    if (!empty($_POST['titre']) and !empty($_POST['contenu'])) {
-        $titre = htmlspecialchars($_POST['titre']);
-        $contenu = htmlspecialchars($_POST['contenu']);
-       // $image_post = htmlspecialchars($_POST['image_post']);
-
-        if ($mode_edition == 0) {
-          
-            $ins = $bdd->prepare('INSERT INTO mysocial  (titre, contenu, image_post, post_like, post_comms, date_time) VALUES (?, ?, ?, ?, ?, NOW())');
-            $ins->execute(array($titre, $contenu, 100, 11, 1 ));  //TODO
-            $lastid = $bdd->lastInsertId();
-
-            if (isset($_FILES['miniature']) and !empty($_FILES['miniature']['name'])) {
-                if (exif_imagetype($_FILES['miniature']['tmp_name']) == 2) {
-                    $chemin = 'miniatures/' . $lastid . '.jpg';
-                    move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
-                } else {
-                    $message = 'format jpg uniquement';
-                }
-            }
-
-
-            $message = 'Article Posté';
-        } else {
-            $update = $bdd->prepare('UPDATE mysocial SET titre = ?, contenu = ?, date_time = NOW() WHERE ID = ?');
-            $update->execute(array($titre, $contenu, $edit_id));
-            header('location: lire.php?id=' . $edit_id);
-        }
-    } else {
-
-        $message = 'remplir tout les champs';
-    }
-}
+include './bdd.php';
+include './load_post.php';
 ?>
 
 <!DOCTYPE html>
@@ -65,37 +13,75 @@ if (isset($_POST['titre'], $_POST['contenu'])) {
     <title>Document</title>
 </head>
 
-
 <body>
-    <header>
-        <span class="welcom">Ecrire un article</span>
-    </header>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        echo "<p>Nouveau Post Publié</p>";
+    ?>
+        <form action="./creation.php" method="POST" enctype="multipart/form-data">
 
-    <form method="POST" enctype="multipart/form-data">
-
-        <input type="text" name="titre" placeholder="titre" <?php if ($mode_edition == 1) {  ?> value="<?=
-                                                                                                                $edit_article['titre'] ?>" <?php } ?></br>
-        <textarea name="contenu" placeholder="Contenu de l'article">
-        <?php if ($mode_edition == 1) {  ?><?=
-                                            $edit_article['contenu'] ?><?php } ?> </textarea></br>
-        <?php if ($mode_edition == 0) {  ?>
-            <input type="file" name="miniature" /> </br>
-         
-
-        <?php } ?>
+            <p><label for="nom"> titre :</label> <input type="texte" name="titre"></p>
+            <p><label for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
+            <p><input type="file" name="miniature"></p>
+            <p><input type="submit" value="OK"></p>
 
 
-        <input type="submit" value="Envoyer l'article" />
+        </form>
+        <?php
+     
 
-    </form>
-    <a href="/index.php">liste des articles</a>
-    <retour>
-        <p style="color: black;"><?php if (isset($message)) {
-                                        echo $message;
-                                    } ?></p>
-    </retour>
-    <br>
+        if (isset($_FILES['miniature']) and !empty($_FILES['miniature']['name'])) {
+            if (exif_imagetype($_FILES['miniature']['tmp_name']) == 2) {
+                $chemin = 'miniatures/' . $_FILES['miniature']['name'];
+                move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
+            } else {
+                $message = 'format jpg uniquement';
+            }
+        }
+
+        $varx =  htmlspecialchars($_POST['contenu']);
+        $message = 'Article Posté';
+        $requete3 = "INSERT INTO `mysocial`(`titre`, `contenu`, `image_post`, `date_time`) VALUES ('" . $_POST['titre'] . "','" . $varx . "','" . $chemin . "', NOW() )";
+        $resultat3 = $bdd->query($requete3);
+        if ($resultat3) {
+            echo "<p>done</p>";
+        } else {
+            echo "<p>Error</p>";
+        }
+
+        ?>
+
+
+    <?php
+
+
+    } else {
+
+    ?>
+      
+        <form action="./creation.php" method="POST" enctype="multipart/form-data">
+            <p><label for="nom"> titre :</label> <input type="texte" name="titre"></p>
+            <p><label for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
+            <p><input type="file" name="miniature"></p>
+
+            <p><input type="submit" value="OK"></p>
+
+
+        </form>
+        <?php
+
+        ?>
+    <?php
+    }
+
+    ?>
+
+
 
 </body>
 
 </html>
+
+
+
+<div>

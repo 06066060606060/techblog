@@ -1,7 +1,7 @@
 <?php
-include 'load_bdd.php';
+include 'load_post.php';
 
-function MyFunction()
+function PostFunction()
 {
     $content = $_SESSION['varname'];
     for ($i = 0; $i < count($content); $i++) { ?>
@@ -10,7 +10,7 @@ function MyFunction()
             <h5><?php echo $content[$i]["time"]; ?></h5>
             <img class="imgpost" src="<?php echo $content[$i]["image_post"]; ?>"></img>
             <p>Lire la Suite</p>
-            <p><?php echo $content[$i]["contenu_post"]; ?></p>
+            <p class="shortened"><?php echo $content[$i]["contenu_post"]; ?></p>
             <div class="social">
                 <p class="like"><span class="icon-thumbs-up-alt"></span> <?php echo $content[$i]["post_like"];
                                                                             echo ($content[$i]["post_like"] > 1) ? ' Likes' : ' like'; ?></p>
@@ -21,4 +21,13 @@ function MyFunction()
 
 
     <?php } ?>
-<?php } ?>
+<?php } 
+
+function MyBackground()
+{
+    echo str_repeat("<span></span>", 36);
+}
+  
+
+  ?>
+

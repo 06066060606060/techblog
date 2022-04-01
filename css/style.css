@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,17 +6,16 @@
   padding: 0px;
 }
 
-*::selection{
+*::selection {
   background-color: rgb(65, 48, 107);
   color: white;
 }
-
 
 html {
   background-color: black;
 }
 
-.error{
+.error {
   color: white;
 }
 
@@ -29,26 +28,68 @@ body {
   max-width: 1200px;
   min-width: 300px;
   background: #010a26;
+  border: 1px solid rgba(0, 80, 252, 0.418);
 }
 
-.header{
+.header {
   position: relative;
 }
 
-.header h1 {
-  font-family: "Share Tech", sans-serif;
+/*//------grid// */
+header grid1 {
   z-index: 2;
-  position: absolute;
-  font-weight: 600;
-  top: 40%;
-  left: 20%;
-  color: white;  /*  TODO */
+  position: relative;
+  margin-top: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: space-evenly;
+  max-width: 1100px;
+}
 
+
+items1 img{
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+  transition: all 500ms ease-out;
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+  min-width: 300px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  backdrop-filter: blur(10px);
+}
+
+items2 img{
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+  min-width: 300px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  backdrop-filter: blur(10px);
+}
+
+items3 img{
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+  transition: all 500ms ease-out;
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+  min-width: 300px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  backdrop-filter: blur(10px);
 }
 
 .header img {
   z-index: 1;
-  opacity: 80%;
+  opacity: 90%;
   position: relative;
   max-width: 100%;
   max-height: 100%;
@@ -93,9 +134,10 @@ body {
 .topnav a:hover {
   border: 1px solid rgba(0, 80, 252, 0.905);
   color: rgb(0, 80, 252);
+  background-color:rgba(0, 80, 252, 0.108);
 }
 
-.fa-brands{
+.fa-brands {
   padding: 10px;
 }
 
@@ -106,14 +148,13 @@ body {
   color: white;
   padding: 20px;
   text-align: center;
-  background: rgba(114, 83, 176, 0.28);
+  background: rgba(47, 79, 172, 0.28);
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   margin-top: 20px;
 }
 
 .footer:hover {
-
   border: 1px solid rgba(0, 80, 252, 0.72);
   backdrop-filter: blur(10px);
 }

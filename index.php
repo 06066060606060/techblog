@@ -1,32 +1,23 @@
 <!DOCTYPE html>
-
-
-<?php $bdd = new PDO("mysql:host=localhost;dbname=mysocial;charset=utf8", "root", "");
-$posts = $bdd->query('SELECT * FROM mysocial ORDER BY date_time DESC');
-include './load_bdd.php';
+<?php
+include './bdd.php';
+include './load_post.php';
 include './affichage.php';
+header('Clear-Site-Data: "cache", "storage", "executionContexts"');
 ?>
 
 
-<?php $con = mysqli_connect("localhost", "root", "", "mysocial");
-// test connection
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-} else {
-    echo " <error style=color:white;>Connexion Base de Donnée OK</error> <br>";
-}
-?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>Margouilla-Tech Blog</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/articles.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/background.css">
     <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
-    <script src="./js/anim.js"></script>
 
 </head>
 
@@ -36,52 +27,21 @@ if (mysqli_connect_errno()) {
         <div class="topnav">
             <a href="/index.php">Accueil</a>
             <a href="#">Contact </a>
-            <a href="/liste.php" style="float:right">Login</a>
+            <a href="/login.php" style="float:right">Login</a>
         </div>
         <div class="header">
-            <h1>Margouilla-Tech Blog</h1>
-            <img src="./img/background.jpg" </img>
+            <img src="./css/background.jpg" </img>
+            <grid1>
+            <items1><img src="./css/1.jpg"</img></items1>
+                <items2><img src="./css/2.jpg"</img></items2>
+                <items3><img src="./css/3.jpg"</img></items3>
+            </grid1>
         </div>
     </header>
 
 
     <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <?php MyBackground(); ?>
     </div>
 
     <article>
@@ -89,7 +49,7 @@ if (mysqli_connect_errno()) {
         <div class="row" />
 
         <div class="colonegauche">
-            <?php MyFunction(); ?>
+            <?php PostFunction(); ?>
         </div>
 
         <div class="colonedroite">
@@ -101,7 +61,7 @@ if (mysqli_connect_errno()) {
             <div class="container">
                 <h3>Follow Me</h3>
                 <i class="fa-brands fa-facebook-square fa-2x"></i>
-                <i class="fa-brands fa-instagram-square fa-2x "></i>
+                <i class="fa-brands fa-github-square fa-2x "></i>
                 <i class="fa-brands fa-twitter-square fa-2x"></i>
             </div>
             <div class="container">
