@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <?php
 include './bdd.php';
-include './load_post.php';
-include './affichage.php';
-header('Clear-Site-Data: "cache", "storage", "executionContexts"');
+include './fonction.php';
 ?>
 
 
@@ -11,7 +9,7 @@ header('Clear-Site-Data: "cache", "storage", "executionContexts"');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Margouilla-Tech Blog</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/articles.css">
@@ -25,16 +23,22 @@ header('Clear-Site-Data: "cache", "storage", "executionContexts"');
 
     <header>
         <div class="topnav">
-            <a href="/index.php">Accueil</a>
+            <a href="./index.php">Accueil</a>
             <a href="#">Contact </a>
-            <a href="/login.php" style="float:right">Login</a>
+            <a href="./backend/login.php" style="float:right">Login</a>
         </div>
         <div class="header">
             <img src="./css/background.jpg" </img>
             <grid1>
-            <items1><img src="./css/1.jpg"</img></items1>
-                <items2><img src="./css/2.jpg"</img></items2>
-                <items3><img src="./css/3.jpg"</img></items3>
+                <items1>
+                    <div class="items1__cover"><img src="./css/1.jpg" </img></div>
+                </items1>
+                <items2>
+                    <div class="items2__cover"><img src="./css/2.jpg" </img></div>
+                </items2>
+                <items3>
+                    <div class="items3__cover"><img src="./css/3.jpg" </img></div>
+                </items3>
             </grid1>
         </div>
     </header>
@@ -54,7 +58,7 @@ header('Clear-Site-Data: "cache", "storage", "executionContexts"');
 
         <div class="colonedroite">
             <div class="container">
-                <h2>About Me</h2>
+                <h2>A Propos de ce Blog</h2>
                 <div class="img1" style="height:100px;"></div>
                 <p>Some text..</p>
             </div>
@@ -64,17 +68,12 @@ header('Clear-Site-Data: "cache", "storage", "executionContexts"');
                 <i class="fa-brands fa-github-square fa-2x "></i>
                 <i class="fa-brands fa-twitter-square fa-2x"></i>
             </div>
+
+
+            
             <div class="container">
                 <h3>Popular Post</h3>
-                <div class="img2">
-                    <p></p>
-                </div>
-                <div class="img3">
-                    <p></p>
-                </div>
-                <div class="img4">
-                    <p></p>
-                </div>
+                <?php PopularFunction(); ?>
             </div>
 
         </div>

@@ -1,6 +1,5 @@
 <?php
 include './bdd.php';
-include './load_post.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +18,10 @@ include './load_post.php';
         echo "<p>Nouveau Post Publié</p>";
     ?>
         <form action="./creation.php" method="POST" enctype="multipart/form-data">
-
             <p><label for="nom"> titre :</label> <input type="texte" name="titre"></p>
             <p><label for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
             <p><input type="file" name="miniature"></p>
             <p><input type="submit" value="OK"></p>
-
 
         </form>
         <?php
@@ -41,7 +38,7 @@ include './load_post.php';
 
         $varx =  htmlspecialchars($_POST['contenu']);
         $message = 'Article Posté';
-        $requete3 = "INSERT INTO `mysocial`(`titre`, `contenu`, `image_post`, `date_time`) VALUES ('" . $_POST['titre'] . "','" . $varx . "','" . $chemin . "', NOW() )";
+        $requete3 = "INSERT INTO `blog`(`titre`, `contenu`, `image_post`, `date_time`) VALUES ('" . $_POST['titre'] . "','" . $varx . "','" . $chemin . "', NOW() )";
         $resultat3 = $bdd->query($requete3);
         if ($resultat3) {
             echo "<p>done</p>";
@@ -50,10 +47,7 @@ include './load_post.php';
         }
 
         ?>
-
-
     <?php
-
 
     } else {
 

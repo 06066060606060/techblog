@@ -1,4 +1,4 @@
-/* colonne principale 75% */
+/* colonne des posts 75% */
 .colonegauche {
   float: left;
   width: 75%;
@@ -12,7 +12,6 @@
   margin-right: 30px;
 }
 
-
 .colonegauche p.shortened {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -24,7 +23,6 @@
   margin-right: 30px;
 }
 
-
 .colonegauche h2 {
   font-family: "Share Tech", sans-serif;
   padding-bottom: 20px;
@@ -32,14 +30,16 @@
 
 .colonegauche h5 {
   font-family: "Share Tech", sans-serif;
+}
 
+.colonegauche h5 {
+  font-family: "Share Tech", sans-serif;
 }
 
 /* image des posts */
 .imgpost {
   padding: 10px;
   width: 100%;
- 
 }
 /* contenair des posts*/
 .container {
@@ -49,7 +49,7 @@
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   padding: 40px;
-  margin-top: 20px; 
+  margin-top: 20px;
   background-color: rgba(47, 79, 172, 0.28);
 }
 
@@ -57,8 +57,43 @@
   border: 1px solid rgba(0, 80, 252, 0.72);
 }
 
+.social {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+}
 
-/* colonne droite*/
+.social p {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 5px;
+}
+
+.icon-like {
+  margin-left: 20px;
+
+}
+
+.fa-solid{
+  margin-left:10px;
+  color: rgb(255, 255, 255);
+}
+
+.fa-solid:active{
+  color: rgb(255, 0, 0);
+  transform: rotateX(7deg) translateY(-4px) scale(1.05);
+}
+.fa-solid:visited{
+  color: rgb(255, 0, 0);
+}
+
+.icon-comms {
+  margin-right: 20px;
+  color: rgb(0, 255, 76);
+}
+
+/* colonne de droite a propos, follow me popular post*/
 .colonedroite {
   position: sticky;
   top: 0;
@@ -94,7 +129,7 @@
   position: relative;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(/css/avatar.png);
+  background-image: url(./avatar.png);
   background-position: top;
   border-radius: 100%;
   width: 89px;

@@ -1,25 +1,6 @@
 /* Responsive: si la fenetre fait moins de 768px modifier ces valeurs:  */
 @media screen and (max-width: 768px) {
 
-
-items1 {
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-  transition: all 500ms ease;
-  visibility: hidden;
-}
-
-items2 {
-    background-color: rgb(117, 115, 115);
-
-}
-
-items3 {
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-  transition: all 500ms ease;
-  visibility: hidden;
-}
   .colonegauche,
   .colonedroite {
     width: 100%;
@@ -49,6 +30,24 @@ items3 {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
 
-
+@media screen and (max-width: 1000px) {
+  items1 {
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    transition: all 500ms ease;
+    visibility: hidden;
+  }
+  
+  items2 {
+     background-color: transparent;
+  }
+  
+  items3 {
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    transition: all 500ms ease;
+    visibility: hidden;
+  }
 }

@@ -7,9 +7,19 @@
 }
 
 *::selection {
-  background-color: rgb(65, 48, 107);
+  background-color: #0332bfa2;
   color: white;
 }
+
+
+a:active{
+  color: rgb(37, 106, 255);
+  background-color:rgba(0, 80, 252, 0.305);
+  transform: rotateX(3deg) translateY(-3px) scale(1.01);
+  transition: visibility 0s, opacity 0.5s linear;
+  transition: all 500ms ease-out;
+}
+
 
 html {
   background-color: black;
@@ -20,7 +30,6 @@ html {
 }
 
 body {
-  /* font-family: 'Roboto', sans-serif; */
   font-family: "Share Tech", sans-serif;
   padding: 10px;
   margin-left: auto;
@@ -47,7 +56,7 @@ header grid1 {
   justify-items: stretch;
   align-items: stretch;
   justify-content: space-evenly;
-  max-width: 1100px;
+  max-width: 800px;
 }
 
 
@@ -62,9 +71,19 @@ items1 img{
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   backdrop-filter: blur(10px);
+  
 }
 
+items1 img:hover {
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+
+}
+
+
+
 items2 img{
+  transition: visibility 0s, opacity 0.5s linear;
+  transition: all 500ms ease-out;
   margin: 10px;
   height: 200px;
   width: 300px;
@@ -72,6 +91,10 @@ items2 img{
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   backdrop-filter: blur(10px);
+}
+
+items2 img:hover {
+    transform: rotateX(7deg) translateY(-6px) scale(1.05);
 }
 
 items3 img{
@@ -87,6 +110,12 @@ items3 img{
   backdrop-filter: blur(10px);
 }
 
+items3 img:hover {
+
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+
+}
+
 .header img {
   z-index: 1;
   opacity: 90%;
@@ -97,6 +126,7 @@ items3 img{
   border: 1px solid rgba(0, 80, 252, 0.418);
   backdrop-filter: blur(10px);
 }
+
 
 .header h1 {
   font-size: 50px;
@@ -128,18 +158,96 @@ items3 img{
   border: 1px solid rgba(0, 80, 252, 0.418);
   background: #010a2654;
   backdrop-filter: blur(10px);
+ 
 }
 
 /* couleur menu au survol */
 .topnav a:hover {
   border: 1px solid rgba(0, 80, 252, 0.905);
-  color: rgb(0, 80, 252);
-  background-color:rgba(0, 80, 252, 0.108);
 }
+
+
 
 .fa-brands {
   padding: 10px;
 }
+
+/* LIRE POST */
+
+.container2{
+  position: relative;
+  width: 900px;
+  margin: auto auto;
+
+}
+/* LIRE POST */
+
+.post{
+	color: white;
+	text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  backdrop-filter: blur(10px);
+  background: rgba(47, 79, 172, 0.28);
+}
+
+.post h1{
+ padding-top: 10px;
+ padding-bottom: 10px;
+ font-size: 40px;
+ 
+}
+
+.post .post-text{
+  margin: 0 5px;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.post .post-image{
+  width: 50%;
+  height: 50%;
+}
+
+.social2 p{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  padding: 5px;
+}
+
+
+.containerpopular{
+  border-radius: 10px;
+  border: 1px solid rgba(0, 80, 252, 0.418);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.titrepop {
+
+  top: 5px;
+  text-align: center;
+}
+
+.imgpost{
+  width: auto;
+  height:auto;
+
+}
+
+.lienpop{
+  margin-bottom:10px;
+}
+
+
+
 
 /* Footer */
 .footer {
