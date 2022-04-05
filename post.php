@@ -34,6 +34,7 @@ include './fonction.php';
     <div class="container2">
     <?php FullPostFunction(); ?>
     </div>
+
     <footer>
         <div class="footer">
             <h3>Copyright</h3>

@@ -21,10 +21,12 @@
   margin-top: 15px;
   margin-left: 30px;
   margin-right: 30px;
+  font-size: 20px;
 }
 
 .colonegauche h2 {
   font-family: "Share Tech", sans-serif;
+  font-size: 40px;
   padding-bottom: 20px;
 }
 
@@ -58,7 +60,8 @@
 }
 
 .social {
-  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.296);
+  margin-top: 40px;
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
 }
@@ -67,12 +70,17 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  padding: 5px;
+  padding: 8px;
+  margin-top: 3px;
 }
 
 .icon-like {
   margin-left: 20px;
+}
 
+.link-post a{
+  padding-right: 20px;
+  text-decoration: none;
 }
 
 .fa-solid{
@@ -86,11 +94,6 @@
 }
 .fa-solid:visited{
   color: rgb(255, 0, 0);
-}
-
-.icon-comms {
-  margin-right: 20px;
-  color: rgb(0, 255, 76);
 }
 
 /* colonne de droite a propos, follow me popular post*/

@@ -1,5 +1,5 @@
 <?php
-include './bdd.php';
+include '.././bdd.php';
 if(isset($_GET['id']) AND !empty($_GET)){
     $getid = $_GET['id'];
 

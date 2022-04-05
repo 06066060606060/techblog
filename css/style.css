@@ -44,19 +44,9 @@ body {
   position: relative;
 }
 
-/*//------grid// */
-header grid1 {
-  z-index: 2;
-  position: relative;
-  margin-top: -50px;
-  left: 50%;
-  transform: translate(-50%);
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-items: stretch;
-  align-items: stretch;
-  justify-content: space-evenly;
-  max-width: 800px;
+
+header img{
+  image-rendering: crisp-edges;
 }
 
 
@@ -127,7 +117,6 @@ items3 img:hover {
   backdrop-filter: blur(10px);
 }
 
-
 .header h1 {
   font-size: 50px;
 }
@@ -166,8 +155,6 @@ items3 img:hover {
   border: 1px solid rgba(0, 80, 252, 0.905);
 }
 
-
-
 .fa-brands {
   padding: 10px;
 }
@@ -176,43 +163,34 @@ items3 img:hover {
 
 .container2{
   position: relative;
-  width: 900px;
   margin: auto auto;
+  color: white;
+  text-align: center;
+}
+
+.container2 h2{
+ font-size: 30px;
+ padding-bottom: 20px;
+
 
 }
+
+.container2 h5{
+  font-size: 18px;
+  padding: 20px;
+
+ }
+ .container2 img{
+  padding: 20px;
+
+ }
 /* LIRE POST */
 
-.post{
-	color: white;
-	text-align: center;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
-  backdrop-filter: blur(10px);
-  background: rgba(47, 79, 172, 0.28);
-}
-
-.post h1{
- padding-top: 10px;
- padding-bottom: 10px;
- font-size: 40px;
- 
-}
-
-.post .post-text{
-  margin: 0 5px;
-  padding: 15px 0;
-  font-size: 16px;
-}
-
-.post .post-image{
-  width: 50%;
-  height: 50%;
-}
 
 .social2 p{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
@@ -224,6 +202,7 @@ items3 img:hover {
 
 
 .containerpopular{
+  background-color: rgba(0, 0, 0, 0.296);
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   padding: 5px;

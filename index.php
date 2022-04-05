@@ -29,17 +29,6 @@ include './fonction.php';
         </div>
         <div class="header">
             <img src="./css/background.jpg" </img>
-            <grid1>
-                <items1>
-                    <div class="items1__cover"><img src="./css/1.jpg" </img></div>
-                </items1>
-                <items2>
-                    <div class="items2__cover"><img src="./css/2.jpg" </img></div>
-                </items2>
-                <items3>
-                    <div class="items3__cover"><img src="./css/3.jpg" </img></div>
-                </items3>
-            </grid1>
         </div>
     </header>
 

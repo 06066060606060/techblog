@@ -67,8 +67,6 @@ body {
   background-color:rgba(0, 80, 252, 0.108);
 }
 
-
-
 .liste_post {
   position: relative;
   font-family: "Share Tech", sans-serif;
@@ -96,12 +94,12 @@ body {
   margin-bottom: 10px;
   background: rgba(0, 80, 252, 0.239);
   backdrop-filter: blur(10px);
-
 }
 
 .postlist img {
   padding: 20px;
   margin-left: -20px;
+  width: 300px;
 }
 
 .postlist h1 {
@@ -128,12 +126,12 @@ body {
 }
 
 .postlist a:nth-child(3) {
-  color: rgba(25, 182, 234, 0.785);
+  color: rgba(173, 104, 0, 0.785);
   padding: 10px;
 }
 
 .postlist a:nth-child(4) {
-  color: rgba(255, 0, 0, 0.508);
+  color: rgba(21, 255, 0, 0.653);
   padding: 10px;
 }
 

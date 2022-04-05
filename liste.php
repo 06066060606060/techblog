@@ -15,6 +15,8 @@ include './bdd.php';
 </head>
 
 <body>
+
+
     <header>
         <div class="topnav">
             <a href="./index.php">Accueil</a>
@@ -27,17 +29,18 @@ include './bdd.php';
             <h1>Liste des Posts</h1>
             <div id="btn2"><a href="./creation.php">Créer un nouveau post</a></div>
             <ul>
-                <?php while ($post = $posts->fetch()) { ?>
+                <?php while ($post = $fullpost->fetch()) { ?>
                     <li>
                         <h2><?= $post['titre'] ?></h2>
-                        <a href="post.php?id=<?= $post['id'] ?>">Voir ce post</a>
-                        <a href="modifier-post.php?id=<?= $post['id'] ?>">Editer ce post</a>
-                        <a href="./backend/suppr.php?id=<?= $post['id'] ?>"> Supprimer ce Post</a></br>
+                        <a href="./backend/modifier-post.php?id=<?= $post['id'] ?>">Editer</a>
+                        <a href="./backend/remove.php?id=<?= $post['id'] ?>"> Désactiver</a>
+                        <a href="./backend/active.php?id=<?= $post['id'] ?>"> Activer</a></br>
+                       
                         <img src="<?= $post['image_post'] ?>" width="100" />
                         <p><?= $post['contenu'] ?></p>
                         <span>&#8205; </span>
                         <p><?= $post['date_time'] ?></p>
-
+                        <a href="./backend/suppr.php?id=<?= $post['id'] ?>" style="color: red;"> Supprimer ce Post</a></br>
                     </li>
                 <?php } ?>
 
