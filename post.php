@@ -12,8 +12,7 @@ include './fonction.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/articles.css">
+    <link rel="stylesheet" href="./css/style.css" id="theme-link">
     <link rel="stylesheet" href="./css/background.css">
     <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
     <title>Articles</title>
@@ -22,7 +21,7 @@ include './fonction.php';
     <header>
         <div class="topnav">
             <a href="./index.php">Accueil</a>
-            <a href="#">Contact </a>
+            <a class="btn-toggle">&#x263e;</a>
         </div>
     </header>
 
@@ -41,5 +40,19 @@ include './fonction.php';
         </div>
     </footer>
 </body>
+<script>
+        // Select the button
+        const btn = document.querySelector(".btn-toggle");
+        // Select the stylesheet <link>
+        const theme = document.querySelector("#theme-link");
 
+        // Listen for a click on the button
+        btn.addEventListener("click", function() {
+            if (theme.getAttribute("href") == "./css/style.css") {
+                theme.href = "./css/Light-theme.css";
+            } else {
+                theme.href = "./css/style.css";
+            }
+        });
+    </script>
 </html>

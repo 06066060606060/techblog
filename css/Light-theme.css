@@ -20,7 +20,7 @@ a:active {
 }
 
 html {
-  background-color: black;
+  background-color: rgb(251, 251, 251);
 }
 
 .error {
@@ -34,7 +34,7 @@ body {
   margin-right: auto;
   max-width: 1200px;
   min-width: 300px;
-  background: #010a26;
+  background: #010a268c;
   border: 1px solid rgba(0, 80, 252, 0.418);
   border-radius: 10px;
 }
@@ -58,6 +58,8 @@ header img {
   backdrop-filter: blur(10px);
 }
 
+
+
 .header h1 {
   font-size: 50px;
 }
@@ -70,13 +72,14 @@ header img {
   margin-bottom: 10px;
 }
 
+
 /* button menu */
 .topnav a {
   z-index: 1;
   position: relative;
   float: left;
   display: block;
-  color: rgba(0, 80, 252, 0.829);
+  color: rgba(255, 255, 255, 0.646);
   text-align: center;
   text-decoration: none;
   border-radius: 8px;
@@ -86,20 +89,19 @@ header img {
   margin: 8px;
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
-  background: #010a2654;
+  background: rgba(47, 78, 172, 0.646);
   backdrop-filter: blur(10px);
 }
 
-
-
 .topnav a:nth-child(2) {
-  margin-bottom: 2px;
-  height: 29px;
+  
+  height: 30px;
   border: 1px solid rgba(0, 80, 252, 0.19);
 }
 .topnav a:nth-child(3) {
   float: right;
 }
+
 
 /* couleur menu au survol */
 .topnav a:hover {
@@ -155,7 +157,7 @@ header img {
   border: 1px solid rgba(0, 80, 252, 0.418);
   padding: 40px;
   margin-top: 20px;
-  background-color: rgba(47, 79, 172, 0.28);
+  background-color: rgba(47, 78, 172, 0.646);
 }
 
 .container:hover {
@@ -181,21 +183,21 @@ header img {
   margin-left: 20px;
 }
 
-.link-post a {
+.link-post a{
   padding-right: 20px;
   text-decoration: none;
 }
 
-.fa-solid {
-  margin-left: 10px;
+.fa-solid{
+  margin-left:10px;
   color: rgb(255, 255, 255);
 }
 
-.fa-solid:active {
+.fa-solid:active{
   color: rgb(255, 0, 0);
   transform: rotateX(7deg) translateY(-4px) scale(1.05);
 }
-.fa-solid:visited {
+.fa-solid:visited{
   color: rgb(255, 0, 0);
 }
 
@@ -244,12 +246,30 @@ header img {
   margin-right: 30px;
 }
 
+
+
 /* contenu vide apres le dernier post*/
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* LIRE POST */
 
@@ -323,7 +343,7 @@ header img {
 }
 
 .imgpost2 {
-  width: 80%;
+  width:80%;
   height: auto;
 }
 

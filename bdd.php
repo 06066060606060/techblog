@@ -5,3 +5,4 @@ $randpost = $bdd->query('SELECT * FROM blog WHERE active = TRUE ORDER BY RAND()'
 $fullpost = $bdd->query('SELECT * FROM blog ORDER BY date_time DESC' );
 // $rands = $bdd->query("SELECT * FROM post ORDER BY RAND()");
      ?>
+  
