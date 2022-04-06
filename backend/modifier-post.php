@@ -1,28 +1,26 @@
-<?php
+<?php //TODO edit
 include '.././bdd.php';
 if(isset($_GET['id']) AND !empty($_GET)){
     $getid = $_GET['id'];
-
-    $recupArticle = $bdd->prepare('SELECT * FROM post WHERE id = ?');
+    $recupArticle = $bdd->prepare('SELECT * FROM blog WHERE id = ?');
     $recupArticle->execute(array($getid));
     if($recupArticle->rowCount() > 0){
         $articleInfos = $recupArticle->fetch();
         $titre = $articleInfos['titre'];
-        $description = $articleInfos['description'];
+        $description = $articleInfos['contenu'];
 
 
         if(isset($_POST['valider'])){
             $titre_saisi = htmlspecialchars($_POST['titre']);
-            $description_saisie = nl2br(htmlspecialchars($_POST['description']));
-
-            $updateArticle = $bdd->prepare('UPDATE post SET titre = ?, description = ? WHERE id = ?');
+            $description_saisie = nl2br(htmlspecialchars($_POST['contenu']));
+            $updateArticle = $bdd->prepare('UPDATE blog SET titre = ?, contenu = ? WHERE id = ?');
             $updateArticle->execute(array($titre_saisi, $description_saisie, $getid));
-            header('Location: post.php');
+            header('Location: .././post.php');
         }
 
     }else
     {
-        echo "Aucun article trouvé";
+        echo "Aucun post trouvé";
     }
 
 }else{

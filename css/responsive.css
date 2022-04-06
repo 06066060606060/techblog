@@ -1,10 +1,6 @@
 /* Responsive: si la fenetre fait moins de 768px modifier ces valeurs:  */
 @media screen and (max-width: 768px) {
 
-body{
-
-}
-
   .colonegauche,
   .colonedroite {
     width: 100%;
@@ -19,8 +15,18 @@ body{
     max-width: 768px;
   }
 
-  .colonegauche{
-    margin-top: 100px;
+  .social2 p {
+  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 80, 252, 0.418);
+    padding: 5px;
+    background-color: rgba(47, 79, 172, 0.28);
   }
 
   .colonedroite {
@@ -28,9 +34,8 @@ body{
   }
 
   .colonedroite h3 {
-    margin-bottom: 60px;
-    text-align: center;
-    width: 100%;
+      text-align: center;
+      width: 100%;
   }
   .colonedroite .img2,
   .img3,

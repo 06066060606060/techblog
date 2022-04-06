@@ -38,11 +38,6 @@
   font-family: "Share Tech", sans-serif;
 }
 
-/* image des posts */
-.imgpost {
-  padding: 10px;
-  width: 100%;
-}
 /* contenair des posts*/
 .container {
   text-align: center;
@@ -124,7 +119,7 @@
   position: relative;
   margin-bottom: 70px;
   color: rgb(255, 255, 255);
-  margin: 10px;
+  margin-bottom: 20px;
 }
 
 /* image aboutme */
@@ -141,35 +136,7 @@
   margin-right: 30px;
 }
 
-/* image ancien post */
-.img2 {
-  position: relative;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  background-color: rgb(2, 102, 44);
-  width: 80px;
-  padding: 20px;
-  margin-bottom: 10px;
-  margin-top: 40px;
-}
-.img3 {
-  position: relative;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  background-color: rgb(99, 2, 102);
-  width: 80px;
-  padding: 20px;
-  margin-bottom: 10px;
-}
 
-.img4 {
-  position: relative;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  background-color: rgb(208, 167, 4);
-  width: 80px;
-  padding: 20px;
-}
 
 /* contenu vide apres le dernier post*/
 .row:after {

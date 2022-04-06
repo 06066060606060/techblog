@@ -3,12 +3,14 @@ include './bdd.php';
 ?>
 
 <!DOCTYPE html>
+<html lang="fr">
 
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="./css/backend.css">
     <title>Liste des Posts</title>
 
@@ -35,11 +37,11 @@ include './bdd.php';
                         <a href="./backend/modifier-post.php?id=<?= $post['id'] ?>">Editer</a>
                         <a href="./backend/remove.php?id=<?= $post['id'] ?>"> Désactiver</a>
                         <a href="./backend/active.php?id=<?= $post['id'] ?>"> Activer</a></br>
-                       
                         <img src="<?= $post['image_post'] ?>" width="100" />
                         <p><?= $post['contenu'] ?></p>
                         <span>&#8205; </span>
-                        <p><?= $post['date_time'] ?></p>
+                        <?php  $date = date_create( $post['date_time']); ?>
+                        <p><?= date_format($date, 'd/m/Y H:i'); ?></p>
                         <a href="./backend/suppr.php?id=<?= $post['id'] ?>" style="color: red;"> Supprimer ce Post</a></br>
                     </li>
                 <?php } ?>
@@ -47,7 +49,7 @@ include './bdd.php';
             </ul>
 
 
-
+            
         </div>
     </div>
 

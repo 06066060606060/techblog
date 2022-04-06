@@ -11,15 +11,13 @@
   color: white;
 }
 
-
-a:active{
+a:active {
   color: rgb(37, 106, 255);
-  background-color:rgba(0, 80, 252, 0.305);
+  background-color: rgba(0, 80, 252, 0.305);
   transform: rotateX(3deg) translateY(-3px) scale(1.01);
   transition: visibility 0s, opacity 0.5s linear;
   transition: all 500ms ease-out;
 }
-
 
 html {
   background-color: black;
@@ -44,66 +42,8 @@ body {
   position: relative;
 }
 
-
-header img{
+header img {
   image-rendering: crisp-edges;
-}
-
-
-items1 img{
-  opacity: 1;
-  transition: visibility 0s, opacity 0.5s linear;
-  transition: all 500ms ease-out;
-  margin: 10px;
-  height: 200px;
-  width: 300px;
-  min-width: 300px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
-  backdrop-filter: blur(10px);
-  
-}
-
-items1 img:hover {
-  transform: rotateX(7deg) translateY(-6px) scale(1.05);
-
-}
-
-
-
-items2 img{
-  transition: visibility 0s, opacity 0.5s linear;
-  transition: all 500ms ease-out;
-  margin: 10px;
-  height: 200px;
-  width: 300px;
-  min-width: 300px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
-  backdrop-filter: blur(10px);
-}
-
-items2 img:hover {
-    transform: rotateX(7deg) translateY(-6px) scale(1.05);
-}
-
-items3 img{
-  opacity: 1;
-  transition: visibility 0s, opacity 0.5s linear;
-  transition: all 500ms ease-out;
-  margin: 10px;
-  height: 200px;
-  width: 300px;
-  min-width: 300px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
-  backdrop-filter: blur(10px);
-}
-
-items3 img:hover {
-
-  transform: rotateX(7deg) translateY(-6px) scale(1.05);
-
 }
 
 .header img {
@@ -147,7 +87,6 @@ items3 img:hover {
   border: 1px solid rgba(0, 80, 252, 0.418);
   background: #010a2654;
   backdrop-filter: blur(10px);
- 
 }
 
 /* couleur menu au survol */
@@ -155,53 +94,54 @@ items3 img:hover {
   border: 1px solid rgba(0, 80, 252, 0.905);
 }
 
-.fa-brands {
-  padding: 10px;
-}
-
 /* LIRE POST */
 
-.container2{
+.container2 {
   position: relative;
   margin: auto auto;
   color: white;
   text-align: center;
 }
 
-.container2 h2{
- font-size: 30px;
- padding-bottom: 20px;
-
-
+.container2 h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
 }
 
-.container2 h5{
+.container2 h5 {
   font-size: 18px;
   padding: 20px;
-
- }
- .container2 img{
+}
+.container2 img {
   padding: 20px;
-
- }
+}
 /* LIRE POST */
 
-
-.social2 p{
+.social2 p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
-  width: 800px;
   border-radius: 30px;
   border: 1px solid rgba(0, 80, 252, 0.418);
   padding: 5px;
+  background-color: rgba(47, 79, 172, 0.28);
 }
 
+.fa-brands {
+  padding: 20px;
+  color: white;
+}
 
-.containerpopular{
+.fa-brands:hover {
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+  transition: visibility 0s, opacity 0.5s linear;
+  transition: all 500ms linear;
+}
+
+.containerpopular {
   background-color: rgba(0, 0, 0, 0.296);
   border-radius: 10px;
   border: 1px solid rgba(0, 80, 252, 0.418);
@@ -209,24 +149,30 @@ items3 img:hover {
   margin-bottom: 10px;
 }
 
+.containerpopular:hover {
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+  transition: visibility 0s, opacity 0.5s linear;
+  transition: all 500ms linear;
+}
 .titrepop {
-
   top: 5px;
   text-align: center;
 }
 
-.imgpost{
-  width: auto;
-  height:auto;
-
+.imgpost {
+  padding-top: 20px;
+  width: 70%;
+  height: auto;
 }
 
-.lienpop{
-  margin-bottom:10px;
+.imgpost2 {
+  width:80%;
+  height: auto;
 }
 
-
-
+.lienpop {
+  margin-bottom: 10px;
+}
 
 /* Footer */
 .footer {

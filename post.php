@@ -5,7 +5,7 @@ include './fonction.php';
 
 
 <!DOCTYPE html>
-
+<html lang="fr">
 
 <head>
 

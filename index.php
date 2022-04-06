@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+<html lang="fr">
 <?php
 include './bdd.php';
 include './fonction.php';
+setlocale(LC_TIME, 'fr_FR');
+date_default_timezone_set('Europe/Paris');
+
 ?>
 
-
-
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Margouilla-Tech Blog</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/articles.css">
@@ -52,14 +55,15 @@ include './fonction.php';
                 <p>Some text..</p>
             </div>
             <div class="container">
-                <h3>Follow Me</h3>
-                <i class="fa-brands fa-facebook-square fa-2x"></i>
-                <i class="fa-brands fa-github-square fa-2x "></i>
-                <i class="fa-brands fa-twitter-square fa-2x"></i>
+                <h3>Suivez Nous</h3>
+                <a href="url"><i class="fa-brands fa-facebook-square fa-3x" id="facebook"></i></a>
+                <a href="url"><i class="fa-brands fa-github-square fa-3x" id="github"></i></a></</>
+                <a href="url"><i class="fa-brands fa-twitter-square fa-3x" id="twitter"></i></a>
+
             </div>
 
 
-            
+
             <div class="container">
                 <h3>Popular Post</h3>
                 <?php PopularFunction(); ?>
