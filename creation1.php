@@ -10,31 +10,21 @@ include './bdd.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="style2.css">
     <title>Document</title>
 </head>
 
 <body>
-<header>
-        <div class="topnav">
-            <a href="index.php">Accueil</a>
-            <a href="#">Contact </a>
-        </div>
-    </header>
-
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        echo "<p><span>Nouveau Post Publié</span></p>";
+        echo "<p>Nouveau Post Publié</p>";
     ?>
-    <div class="forms">
-        <form class="myform" action="./creation.php" method="POST" enctype="multipart/form-data">
+        <form action="./creation.php" method="POST" enctype="multipart/form-data">
             <p><label for="nom"> titre :</label> <input type="texte" name="titre"></p>
             <p><label for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
             <p><input type="file" name="miniature"></p>
             <p><input type="submit" value="OK"></p>
 
         </form>
-    </div>
         <?php
      
 
@@ -52,9 +42,9 @@ include './bdd.php';
         $requete3 = "INSERT INTO `blog`(`titre`, `contenu`, `image_post`, `date_time`) VALUES ('" . $_POST['titre'] . "','" . $varx . "','" . $chemin . "', NOW() )";
         $resultat3 = $bdd->query($requete3);
         if ($resultat3) {
-            echo "<p><span>done</span></p>";
+            echo "<p>done</p>";
         } else {
-            echo "<p><span>Error</span></p>";
+            echo "<p>Error</p>";
         }
 
         ?>
@@ -63,8 +53,8 @@ include './bdd.php';
     } else {
 
     ?>
-      <div class="forms">
-        <form class="myform" action="./creation.php" method="POST" enctype="multipart/form-data">
+      
+        <form action="./creation.php" method="POST" enctype="multipart/form-data">
             <p><label for="nom"> titre :</label> <input type="texte" name="titre"></p>
             <p><label for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
             <p><input type="file" name="miniature"></p>
@@ -73,7 +63,6 @@ include './bdd.php';
 
 
         </form>
-    </div>
         <?php
 
         ?>
@@ -82,11 +71,7 @@ include './bdd.php';
 
     ?>
 
-<footer>
-        <div class="footer">
-            <h3>Copyright</h3>
-        </div>
-    </footer>
+
 
 </body>
 

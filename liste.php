@@ -22,7 +22,6 @@ include './bdd.php';
     <header>
         <div class="topnav">
             <a href="./index.php">Accueil</a>
-            <a href="#">Contact </a>
             <a href="./login.php" style="float:right">Login</a>
         </div>
     </header>
@@ -33,7 +32,7 @@ include './bdd.php';
             <ul>
                 <?php while ($post = $fullpost->fetch()) { ?>
                     <li>
-                        <h2><?= $post['titre'] ?></h2>
+                        <h2><?= $post['titre'] ?></h2><h5 style="color:aliceblue;">Visible:<?= $post['active']  ?></h5>
                         <a href="./backend/modifier-post.php?id=<?= $post['id'] ?>">Editer</a>
                         <a href="./backend/remove.php?id=<?= $post['id'] ?>"> Désactiver</a>
                         <a href="./backend/active.php?id=<?= $post['id'] ?>"> Activer</a></br>
@@ -47,9 +46,6 @@ include './bdd.php';
                 <?php } ?>
 
             </ul>
-
-
-            
         </div>
     </div>
 

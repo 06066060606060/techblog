@@ -115,7 +115,7 @@ body {
 }
 
 .postlist p {
-  
+  overflow: hidden;
   text-align: center;
   color: #fff;
 }

@@ -5,7 +5,7 @@ function PostFunction()
 {
     include './bdd.php';
     while ($post = $posts->fetch()) {
-        
+
         $content[] = [
             'id' => $post['id'],
             'titre_post' => $post['titre'],
@@ -15,22 +15,25 @@ function PostFunction()
             'post_like' => $post['post_like'],
             'post_comms' => $post['post_comms']
         ];
-        $date = date_create( $post['date_time']);
+        $date = date_create($post['date_time']);
     }
 
     for ($i = 0; $i < count($content); $i++) { ?>
         <div class="container">
-            
-            <h2><?php echo $content[$i]["titre_post"]; ?></h2>
-            <h5><?php echo date_format($date, 'd/m/Y H:i'); ?></h5>
-            <img class="imgpost" src="<?php echo $content[$i]["image_post"]; ?>"></img>
 
-            <p class="shortened"><?php echo $content[$i]["contenu_post"]; ?></p>
+            <h2><?= $content[$i]["titre_post"]; ?></h2>
+            <h5><?= date_format($date, 'd/m/Y H:i'); ?></h5>
+            <img class="imgpost" src="<?= $content[$i]["image_post"]; ?>"></img>
 
+            <p class="shortened"><?= $content[$i]["contenu_post"]; ?></p>
             <div class="social">
                 <p>
-                   <span class="icon-like"><?php echo $content[$i]["post_like"]; ?> <a href="./backend/like.php?id=<?= $content[$i]['id'];?>"><i class="fa-solid fa-heart" onclick="this.style.color='red';"></i></span></a>
-                    <span class="link-post"><a href="post.php?id=<?= $content[$i]['id']; ?>" style="color:rgb(37, 106, 255);"><?php echo "Lire la suite..."; ?></a></span>
+                    <span class="icon-like" ><?= $content[$i]['post_like']; ?>
+                        <a href="./backend/like.php?id=<?= $content[$i]['id']; ?>">
+                            <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i>
+                    </span>
+                    </a>
+                    <span class="link-post"><a href="post.php?id=<?= $content[$i]['id']; ?>" style="color:rgb(37, 106, 255);"><?= "Lire la suite..."; ?></a></span>
                 </p>
 
             </div>
@@ -51,7 +54,7 @@ function FullPostFunction()
         $get_id = htmlspecialchars($_GET['id']);
         $post = $bdd->prepare('SELECT * FROM blog WHERE id = ?');
         $post->execute(array($get_id));
-    
+
         if ($post->rowCount() == 1) {
             $post = $post->fetch();
             $id = $post['id'];
@@ -60,27 +63,26 @@ function FullPostFunction()
             $image_post = $post['image_post'];
             $post_like = $post['post_like'];
             $date_time = $post['date_time'];
-            $date = date_create( $post['date_time']);
+            $date = date_create($post['date_time']);
         } else {
             die('Cet article n\' existe pas!');
         }
     } else {
         die('erreur');
-    }
-    { ?> 
-       
-            <h2><?php echo $titre ?></h2>
-            <h5><?php echo  $contenu ?></h5>
-            <img class="imgpost2" src="<?php echo $image_post ?>"></img>
-            <p><?php echo date_format($date, 'd/m/Y H:i');  ?></p>
-            <div class="social2">
-                <p>
-                    <span class="icon-like"><?php echo $post_like ?><a href="./backend/like.php?id=<?= $post['id'];?>"><i class="fa-solid fa-heart" onclick="this.style.color='red';"></i></span></a>
-                   
-                </p>
+    } { ?>
 
-            </div>
-       
+        <h2><?php echo $titre ?></h2>
+        <h5><?php echo  $contenu ?></h5>
+        <img class="imgpost2" src="<?php echo $image_post ?>"></img>
+        <p><?php echo date_format($date, 'd/m/Y H:i');  ?></p>
+        <div class="social2">
+            <p>
+                <span class="icon-like"><?php echo $post_like ?><a href="./backend/like.php?id=<?= $post['id']; ?>"><i class="fa-solid fa-heart" onclick="this.style.color='red';"></i></span></a>
+
+            </p>
+
+        </div>
+
 
     <?php
         $bdd->connection = null;

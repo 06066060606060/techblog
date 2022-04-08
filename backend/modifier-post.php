@@ -1,21 +1,22 @@
-<?php //TODO edit
+<?php
 include '.././bdd.php';
 if(isset($_GET['id']) AND !empty($_GET)){
     $getid = $_GET['id'];
-    $recupArticle = $bdd->prepare('SELECT * FROM blog WHERE id = ?');
-    $recupArticle->execute(array($getid));
-    if($recupArticle->rowCount() > 0){
-        $articleInfos = $recupArticle->fetch();
-        $titre = $articleInfos['titre'];
-        $description = $articleInfos['contenu'];
+    $requete3 = $bdd->prepare('SELECT * FROM blog WHERE id = ?');
+    $requete3->execute(array($getid));
+    if($requete3->rowCount() > 0){
+        $resultat3 = $requete3->fetch();
+        
+        $titre = $resultat3['titre'];
+        $contenu = $resultat3['contenu'];
 
 
         if(isset($_POST['valider'])){
             $titre_saisi = htmlspecialchars($_POST['titre']);
-            $description_saisie = nl2br(htmlspecialchars($_POST['contenu']));
-            $updateArticle = $bdd->prepare('UPDATE blog SET titre = ?, contenu = ? WHERE id = ?');
-            $updateArticle->execute(array($titre_saisi, $description_saisie, $getid));
-            header('Location: .././post.php');
+            $contenu_saisie = htmlspecialchars($_POST['contenu']);
+            $updatePost = $bdd->prepare('UPDATE blog SET titre = ?, contenu = ? WHERE id = ?');
+            $updatePost->execute(array($titre_saisi, $contenu_saisie, $getid));
+            header('Location: .././index.php');
         }
 
     }else
@@ -24,7 +25,7 @@ if(isset($_GET['id']) AND !empty($_GET)){
     }
 
 }else{
-    echo "Aucun identifiant trouvé";
+    echo "id introuvable";
 }
 ?>
 <!DOCTYPE html>
@@ -37,7 +38,7 @@ if(isset($_GET['id']) AND !empty($_GET)){
     <form method="POST" action="">
         <input type="texte" name="titre" value="<?= $titre; ?>">
         <br>
-        <textarea name="description"><?= $description; ?></textarea>
+        <textarea name="contenu"><?= $contenu; ?></textarea>
         <br><br>
         <input type="submit" name="valider">
     </form>

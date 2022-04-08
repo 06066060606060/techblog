@@ -10,9 +10,9 @@
 
   .container2{
     width: 400px;
-    padding: 0;
-    padding: 10px;
+
     max-width: 768px;
+    padding-top: 100px;
   }
 
   .social2 p {

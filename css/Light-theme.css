@@ -35,7 +35,7 @@ body {
   max-width: 1200px;
   min-width: 300px;
   background: #010a268c;
-  border: 1px solid rgba(0, 80, 252, 0.418);
+  border: 1px solid rgba(248, 248, 248, 0.418);
   border-radius: 10px;
 }
 
@@ -54,7 +54,7 @@ header img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
+  border: 1px solid rgba(248, 248, 248, 0.418);
   backdrop-filter: blur(10px);
 }
 
@@ -88,24 +88,25 @@ header img {
   padding-right: 20px;
   margin: 8px;
   border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
-  background: rgba(47, 78, 172, 0.646);
+  border: 1px solid rgba(248, 248, 248, 0.418);
+  background: rgba(47, 70, 172, 0.646);
   backdrop-filter: blur(10px);
 }
 
 .topnav a:nth-child(2) {
   
   height: 30px;
-  border: 1px solid rgba(0, 80, 252, 0.19);
+
 }
 .topnav a:nth-child(3) {
   float: right;
+  
 }
 
 
 /* couleur menu au survol */
 .topnav a:hover {
-  border: 1px solid rgba(0, 80, 252, 0.905);
+  border: 1px solid rgba(248, 248, 248, 0.653);
 }
 
 /* colonne des posts 75% */
@@ -154,21 +155,22 @@ header img {
   color: white;
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
+  border: 1px solid rgba(248, 248, 248, 0.418);
   padding: 40px;
   margin-top: 20px;
-  background-color: rgba(47, 78, 172, 0.646);
+  background-color: rgba(47, 76, 172, 0.646);
+
 }
 
 .container:hover {
-  border: 1px solid rgba(0, 80, 252, 0.72);
+  border: 1px solid rgba(248, 248, 248, 0.72);
 }
 
 .social {
   background-color: rgba(0, 0, 0, 0.296);
   margin-top: 40px;
   border-radius: 10px;
-  border: 1px solid rgba(0, 80, 252, 0.418);
+  border: 1px solid rgba(248, 248, 248, 0.418);
 }
 
 .social p {
