@@ -69,7 +69,7 @@ body {
 
 .forms input{
   
-  border: 2px solid rgba(0, 80, 252, 0.905);
+  border: 1px solid rgba(0, 80, 252, 0.905);
   border-radius: 10px;
   outline: none;
   padding: 0 20px;
@@ -78,17 +78,18 @@ body {
 }
 
 
-.forms label{
-  position: absolute;
-  left: 799px;
-  text-transform: capitalize;
+.forms .label{
+  text-align: center;
+  left: 50%;
   font-size: 18px;
   transition: top .5s;
   padding: 0 5px;
   pointer-events: none;
 }
 
-
+.forms .newpost{
+  background-color: white;
+}
 
 span{
   color: #fff;

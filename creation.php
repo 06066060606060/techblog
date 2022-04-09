@@ -10,7 +10,7 @@ include './bdd.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="./css/style2.css">
     <title>Document</title>
 </head>
 
@@ -65,8 +65,8 @@ include './bdd.php';
     ?>
       <div class="forms">
         <form class="myform" action="./creation.php" method="POST" enctype="multipart/form-data">
-            <p><label for="nom"> titre :</label> <input type="texte" name="titre"></p>
-            <p><label for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
+            <p><label class="label" for="nom"> titre :</label> <input type="texte" name="titre"></p>
+            <p><label class="label" for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
             <p><input type="file" name="miniature"></p>
 
             <p><input type="submit" value="OK"></p>
