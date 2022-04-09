@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Margouilla-Tech Blog</title>
+    <link rel="stylesheet" href="./css/style.css" id="theme-link">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="topnav">
+            <a href="">Accueil</a>
+            <a class="btn-toggle">&#x263e;</a>
+            <a href="">Login</a>
+        </div>
+        <div class="header">
+            <img src="./css/background.jpg" </img>
+        </div>
+    </header>
+
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <article>
+
+        <div class="row" />
+
+        <div class="colonegauche">
+            <div class="container">
+
+                <h2>Titre Post</h2>
+                <h5>Mardi 8 Janvier 2022</h5>
+                <img class="imgpost" src="./miniatures/axon.jpg"></img>
+    
+                <p class="shortened">dskdfhksqjflqsjflsjdfqshdfkj</p>
+                <div class="social">
+                    <p>
+                        <span class="icon-like" ><a href="">
+                                <i class="fa-solid fa-heart" onclick="this.style.color='red';">10</i>
+                        </span>
+                        </a>
+                        <span class="link-post"><a href="" style="color:rgb(37, 106, 255);">Lire la suite...</a></span>
+                    </p>
+    
+                </div>
+            </div>
+            <div class="container">
+
+                <h2>Titre Post</h2>
+                <h5>Mardi 8 Janvier 2022</h5>
+                <img class="imgpost" src="./miniatures/btc-monthly.jpg"></img>
+    
+                <p class="shortened">dskdfhksqjflqsjflsjdfqshdfkj</p>
+                <div class="social">
+                    <p>
+                        <span class="icon-like" ><a href="">
+                                <i class="fa-solid fa-heart" onclick="this.style.color='red';"> 8</i>
+                        </span>
+                        </a>
+                        <span class="link-post"><a href="" style="color:rgb(37, 106, 255);">Lire la suite...</a></span>
+                    </p>
+    
+                </div>
+            </div>
+            <div class="container">
+
+                <h2>Titre Post</h2>
+                <h5>Mardi 8 Janvier 2022</h5>
+                <img class="imgpost" src="./miniatures/IMG_20220122_052658.jpg"></img>
+    
+                <p class="shortened">dskdfhksqjflqsjflsjdfqshdfkj</p>
+                <div class="social">
+                    <p>
+                        <span class="icon-like" ><a href="">
+                                <i class="fa-solid fa-heart" onclick="this.style.color='red';"> 5</i>
+                        </span>
+                        </a>
+                        <span class="link-post"><a href="" style="color:rgb(37, 106, 255);">Lire la suite...</a></span>
+                    </p>
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="colonedroite">
+            <div class="container">
+                <h2>A Propos de ce Blog</h2>
+                <div class="img1" style="height:100px;"></div>
+                <p>Some text..</p>
+            </div>
+            <div class="container">
+                <h3>Suivez Nous</h3>
+                <a href="url"><i class="fa-brands fa-facebook-square fa-3x" id="facebook"></i></a>
+                <a href="url"><i class="fa-brands fa-github-square fa-3x" id="github"></i></a></< />
+                <a href="url"><i class="fa-brands fa-twitter-square fa-3x" id="twitter"></i></a>
+
+            </div>
+
+
+
+            <div class="container">
+                <h3>Post Populaire</h3>
+                <div class="containerpopular">
+                    <i class="titrepop"</i>
+                    <p class="lienpop">
+                        <a href="" style="color:rgb(37, 106, 255);">post 1<img class="imgpost" src=""></img></a>
+                    </p>
+                    
+                </div>
+                <div class="containerpopular">
+                    <i class="titrepop"</i>
+                    <p class="lienpop">
+                        <a href="" style="color:rgb(37, 106, 255);">Post 2<img class="imgpost" src=""></img></a>
+                    </p>
+                    
+                </div>
+                <div class="containerpopular">
+                    <i class="titrepop"</i>
+                    <p class="lienpop">
+                        <a href="" style="color:rgb(37, 106, 255);">Post 3<img class="imgpost" src=""></img></a>
+                    </p>
+                    
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </article>
+
+    <footer>
+        <div class="footer">
+            <h3>Copyright</h3>
+        </div>
+    </footer>
+    <script>
+        // Select the button
+        const btn = document.querySelector(".btn-toggle");
+        // Select the stylesheet <link>
+        const theme = document.querySelector("#theme-link");
+
+        // Listen for a click on the button
+        btn.addEventListener("click", function() {
+            if (theme.getAttribute("href") == "./css/style.css") {
+                theme.href = "./css/Light-theme.css";
+            } else {
+                theme.href = "./css/style.css";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
