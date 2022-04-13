@@ -13,7 +13,9 @@ function PostFunction()
             'image_post' => $post['image_post'],
             'time' =>  $post['date_time'],
             'post_like' => $post['post_like'],
-            'post_comms' => $post['post_comms']
+            'post_comms' => $post['post_comms'],
+            'categorie' => $post['categorie'],
+            'auteur' => $post['auteur']
         ];
         $date = date_create($post['date_time']);
     }
@@ -22,7 +24,7 @@ function PostFunction()
         <div class="container">
 
             <h2><?= $content[$i]["titre_post"]; ?></h2>
-            <h5><?= date_format($date, 'd/m/Y H:i'); ?></h5>
+            <h5>Posté le <?= date_format($date, 'd/m/Y H:i'); ?> par <?= $content[$i]["auteur"]; ?></h5>
             <img class="imgpost" src="<?= $content[$i]["image_post"]; ?>"></img>
 
             <p class="shortened"><?= $content[$i]["contenu_post"]; ?></p>
@@ -30,10 +32,12 @@ function PostFunction()
                 <p>
                     <span class="icon-like" ><?= $content[$i]['post_like']; ?>
                         <a href="./backend/like.php?id=<?= $content[$i]['id']; ?>">
-                            <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i>
+                        <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i>  </a>
                     </span>
-                    </a>
                     <span class="link-post"><a href="post.php?id=<?= $content[$i]['id']; ?>" style="color:rgb(37, 106, 255);"><?= "Lire la suite..."; ?></a></span>
+                    <span class="comm-post"><?= $content[$i]['post_comms']; ?>
+                <i class="fa-solid fa-message"> </i>
+                </span>
                 </p>
 
             </div>
@@ -46,7 +50,7 @@ function PostFunction()
 
 
 
-//AFFICHAGE D'UN POST AVEC L'ID DE L'URL
+//AFFICHAGE D'UN POST AVEC L'ID DE L'URL avec isset
 function FullPostFunction()
 {
     include './bdd.php';
@@ -62,6 +66,7 @@ function FullPostFunction()
             $contenu = $post['contenu'];
             $image_post = $post['image_post'];
             $post_like = $post['post_like'];
+            $post_comms = $post['post_comms'];
             $date_time = $post['date_time'];
             $date = date_create($post['date_time']);
         } else {
@@ -77,8 +82,15 @@ function FullPostFunction()
         <p><?php echo date_format($date, 'd/m/Y H:i');  ?></p>
         <div class="social2">
             <p>
-                <span class="icon-like"><?php echo $post_like ?><a href="./backend/like.php?id=<?= $post['id']; ?>"><i class="fa-solid fa-heart" onclick="this.style.color='red';"></i></span></a>
-
+                <span class="icon-like"><?php echo $post_like ?>
+                <a href="./backend/like.php?id=<?= $post['id']; ?>">
+                <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i>
+                </span></a>
+                <span class="link-post"><a href="./backend/comms.php?id=<?= $post['id']; ?>" style="color:rgb(37, 106, 255);"><?= "Laisser un commentaire..."; ?></a></span>
+                <span class="comm-post" ><?= $post_comms ?>
+                <a href="./backend/comms.php?id=<?= $post['id']; ?>"></a>
+                <i class="fa-solid fa-message"></i>
+                </span>
             </p>
 
         </div>

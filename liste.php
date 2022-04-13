@@ -1,7 +1,6 @@
 <?php
 include './bdd.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,12 +12,9 @@ include './bdd.php';
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="./css/backend.css">
     <title>Liste des Posts</title>
-
 </head>
 
 <body>
-
-
     <header>
         <div class="topnav">
             <a href="./index.php">Accueil</a>

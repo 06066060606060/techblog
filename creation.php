@@ -18,7 +18,6 @@ include './bdd.php';
 <header>
         <div class="topnav">
             <a href="index.php">Accueil</a>
-            <a href="#">Contact </a>
         </div>
     </header>
 

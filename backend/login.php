@@ -9,14 +9,11 @@ include '.././fonction.php';
     <title>PHP login system</title>
     <link rel="stylesheet" href=".././css/background.css">
     <link rel="stylesheet" href=".././css/backend.css">
-
 </head>
 
 <body>
-
-
     <div class="background">
-        <?php MyBackground(); ?>
+     <?php MyBackground(); ?>
     </div>
     <div class="header">
         <div id="frm">
