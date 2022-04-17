@@ -1,190 +1,205 @@
-<!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
+  <?php
+  include './bdd.php';
+  include './mesfonction.php';
+  setlocale(LC_TIME, 'fr_FR');
+  date_default_timezone_set('Europe/Paris');
+  
+  ?>
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Margouilla-Tech Blog</title>
-    <link rel="stylesheet" href="./css/style.css" id="theme-link">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link rel="stylesheet" href="./css/background.css">
-    <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <script type="text/javascript" src="./js/anim.js"></script>
+  <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
+  <title>Document</title>
 </head>
 
 <body>
+  <div class="back"></div>
+  <div class="central">
+    <div class="containerprincipal">
+      <header class="logo box">
+        <img class="logom" src="./img/marg.png">
+      </header>
 
-    <header>
-        <div class="topnav">
-            <a href="">Accueil</a>
-            <a class="btn-toggle">&#x263e;</a>
-            <a href="">Login</a>
+      <div class="headerbar">
+        <h1>
+          <span style="--i:1">M</span>
+          <span style="--i:2">a</span>
+          <span style="--i:3">r</span>
+          <span style="--i:4">g</span>
+          <span style="--i:5">o</span>
+          <span style="--i:6">u</span>
+          <span style="--i:7">l</span>
+          <span style="--i:8">a</span>
+          <span style="--i:9">b &zwnj;</span>
+          <span style="--i:10">Tech &zwnj;</span>
+          <span style="--i:11">B</span>
+          <span style="--i:12">l</span>
+          <span style="--i:13">o</span>
+          <span style="--i:14">g</span>
+
+        </h1>
+      </div>
+
+      <nav class="menu">
+        <div class="cat1" onclick="toggleNav()">Catégories</div>
+        <div id="cat2" >News</div>
+        <div id="cat3">Hardware</div>
+        <div id="cat4">Software</div>
+        <div id="cat5">Photos</div>
+        <div class="cat6"><a href="" style="color: white">login</a></div>
+      </nav>
+
+      <main class="main">
+        <article>
+          <div class="box">
+            <h2>Xbox Game Pass April 2022</h2>
+            <h5>Posté le 14/04/2022 17:24 par </h5>
+            <img class="imgpost" src="./miniatures/1.jpg"></img>
+
+            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
+              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
+            <div class="social">
+              <p>
+                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                    <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                </span>
+                <span class="link-post"><a href="post.php?id=14" style="color:rgb(37, 106, 255);">Lire la
+                    suite</a></span>
+                <span class="comm-post">9
+                  <i class="fa-solid fa-message"> </i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="box">
+            <h2>Xbox Game Pass April 2022</h2>
+            <h5>Posté le 14/04/2022 17:24 par </h5>
+            <img class="imgpost" src="./miniatures/2.jpg"></img>
+
+            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
+              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
+            <div class="social">
+              <p>
+                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                    <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                </span>
+                <span class="link-post"><a href="post.php?id=14" style="color:rgb(37, 106, 255);">Lire la
+                    suite</a></span>
+                <span class="comm-post">7
+                  <i class="fa-solid fa-message"> </i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="box">
+            <h2>Xbox Game Pass April 2022</h2>
+            <h5>Posté le 14/04/2022 17:24 par </h5>
+            <img class="imgpost" src="./miniatures/3.jpg"></img>
+
+            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
+              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
+            <div class="social">
+              <p>
+                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                    <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                </span>
+                <span class="link-post"><a href="post.php?id=14" style="color:rgb(37, 106, 255);">Lire la
+                    suite</a></span>
+                <span class="comm-post">9
+                  <i class="fa-solid fa-message"> </i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="box">
+            <h2>Xbox Game Pass April 2022</h2>
+            <h5>Posté le 14/04/2022 17:24 par </h5>
+            <img class="imgpost" src="./miniatures/4.jpg"></img>
+
+            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
+              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
+            <div class="social">
+              <p>
+                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                    <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                </span>
+                <span class="link-post"><a href="post.php?id=14" style="color:rgb(37, 106, 255);">Lire la
+                    suite</a></span>
+                <span class="comm-post">2
+                  <i class="fa-solid fa-message"> </i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <aside class="sidebar box">
+
+        <!-- a propos -->
+        <h3>A propos</h3>
+        <img class="abimg" src="./img/avatar.png"></img>
+        <p class="abtext">Demo blog formation Simplon 2022</p>
+
+        <!-- post populaires -->
+        <h3>Post Populaires</h3>
+<div class="postp">
+        <div class="poppost">
+          <a href="http://">
+            <h5 class="psttitre">Titre post</h5>
+            <img class="popimg" src="./miniatures/1.jpg"></img>
+          </a>
         </div>
-        <div class="header">
-            <img src="./css/background.jpg" </img>
+
+        <div class="poppost">
+          <a href="http://">
+            <h5 class="psttitre">Titre post</h5>
+            <img class="popimg" src="./miniatures/2.jpg"></img>
+          </a>
         </div>
-    </header>
+
+        <div class="poppost">
+          <a href="http://">
+            <h5 class="psttitre">Titre post</h5>
+            <img class="popimg" src="./miniatures/3.jpg"></img>
+          </a>
+        </div>
+</div>
+
+        <!-- Social -->
+        <div class="social">
+   
+          <h3>Contact</h3>
+          <a href="url"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
+          <a href="url"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
+        </div>
+
+      </aside>
+
+      <btn class="next">
+        <div class="newer"><i class="fa-solid fa-arrow-left-long"></i></div>
+        <div class="older"><i class="fa-solid fa-arrow-right-long"></i></div>
+      </btn>
 
 
-    <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      <footer class="footer box">
+        <a href="" style="color: white">Copyright</a>
+      </footer>
+
+      <div class="spacer">&zwnj; </div>
     </div>
-
-    <article>
-
-        <div class="row" />
-
-        <div class="colonegauche">
-            <div class="container">
-
-                <h2>Titre Post</h2>
-                <h5>Mardi 8 Janvier 2022</h5>
-                <img class="imgpost" src="./miniatures/axon.jpg"></img>
-    
-                <p class="shortened">dskdfhksqjflqsjflsjdfqshdfkj</p>
-                <div class="social">
-                    <p>
-                        <span class="icon-like" ><a href="">
-                                <i class="fa-solid fa-heart" onclick="this.style.color='red';">10</i>
-                        </span>
-                        </a>
-                        <span class="link-post"><a href="" style="color:rgb(37, 106, 255);">Lire la suite...</a></span>
-                    </p>
-    
-                </div>
-            </div>
-            <div class="container">
-
-                <h2>Titre Post</h2>
-                <h5>Mardi 8 Janvier 2022</h5>
-                <img class="imgpost" src="./miniatures/btc-monthly.jpg"></img>
-    
-                <p class="shortened">dskdfhksqjflqsjflsjdfqshdfkj</p>
-                <div class="social">
-                    <p>
-                        <span class="icon-like" ><a href="">
-                                <i class="fa-solid fa-heart" onclick="this.style.color='red';"> 8</i>
-                        </span>
-                        </a>
-                        <span class="link-post"><a href="" style="color:rgb(37, 106, 255);">Lire la suite...</a></span>
-                    </p>
-    
-                </div>
-            </div>
-            <div class="container">
-
-                <h2>Titre Post</h2>
-                <h5>Mardi 8 Janvier 2022</h5>
-                <img class="imgpost" src="./miniatures/IMG_20220122_052658.jpg"></img>
-    
-                <p class="shortened">dskdfhksqjflqsjflsjdfqshdfkj</p>
-                <div class="social">
-                    <p>
-                        <span class="icon-like" ><a href="">
-                                <i class="fa-solid fa-heart" onclick="this.style.color='red';"> 5</i>
-                        </span>
-                        </a>
-                        <span class="link-post"><a href="" style="color:rgb(37, 106, 255);">Lire la suite...</a></span>
-                    </p>
-    
-                </div>
-            </div>
-        </div>
-
-        <div class="colonedroite">
-            <div class="container">
-                <h2>A Propos de ce Blog</h2>
-                <div class="img1" style="height:100px;"></div>
-                <p>Some text..</p>
-            </div>
-            <div class="container">
-                <h3>Suivez Nous</h3>
-                <a href="url"><i class="fa-brands fa-facebook-square fa-3x" id="facebook"></i></a>
-                <a href="url"><i class="fa-brands fa-github-square fa-3x" id="github"></i></a></< />
-                <a href="url"><i class="fa-brands fa-twitter-square fa-3x" id="twitter"></i></a>
-
-            </div>
-
-
-
-            <div class="container">
-                <h3>Post Populaire</h3>
-                <div class="containerpopular">
-                    <i class="titrepop"</i>
-                    <p class="lienpop">
-                        <a href="" style="color:rgb(37, 106, 255);">post 1<img class="imgpost" src=""></img></a>
-                    </p>
-                    
-                </div>
-                <div class="containerpopular">
-                    <i class="titrepop"</i>
-                    <p class="lienpop">
-                        <a href="" style="color:rgb(37, 106, 255);">Post 2<img class="imgpost" src=""></img></a>
-                    </p>
-                    
-                </div>
-                <div class="containerpopular">
-                    <i class="titrepop"</i>
-                    <p class="lienpop">
-                        <a href="" style="color:rgb(37, 106, 255);">Post 3<img class="imgpost" src=""></img></a>
-                    </p>
-                    
-                </div>
-            </div>
-
-        </div>
-        </div>
-
-    </article>
-
-    <footer>
-        <div class="footer">
-            <h3>Copyright</h3>
-        </div>
-    </footer>
-    <script>
-        // Select the button
-        const btn = document.querySelector(".btn-toggle");
-        // Select the stylesheet <link>
-        const theme = document.querySelector("#theme-link");
-
-        // Listen for a click on the button
-        btn.addEventListener("click", function() {
-            if (theme.getAttribute("href") == "./css/style.css") {
-                theme.href = "./css/Light-theme.css";
-            } else {
-                theme.href = "./css/style.css";
-            }
-        });
-    </script>
-
+  </div>
 </body>
 
 </html>

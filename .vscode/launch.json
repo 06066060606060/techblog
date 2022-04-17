@@ -1,10 +1,28 @@
 {
     "configurations": [
         {
-            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "name": "Launch Edge",
             "request": "launch",
-            "type": "vscode-edge-devtools.debug",
-            "url": "http://localhost/" // Provide your project's url to finish configuring
+            "type": "msedge",
+            "url": "http://localhost",
+            "webRoot": "${workspaceFolder}"
+        }
+       
+    ],
+    "compounds": [
+        {
+            "name": "Launch Edge Headless and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge in headless mode",
+                "Open Edge DevTools"
+            ]
+        },
+        {
+            "name": "Launch Edge and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge",
+                "Open Edge DevTools"
+            ]
         }
     ]
 }

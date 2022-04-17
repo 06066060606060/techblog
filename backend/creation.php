@@ -10,7 +10,7 @@ include './bdd.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
@@ -18,7 +18,6 @@ include './bdd.php';
 <header>
         <div class="topnav">
             <a href="index.php">Accueil</a>
-            <a href="#">Contact </a>
         </div>
     </header>
 
@@ -49,7 +48,8 @@ include './bdd.php';
 
         $varx =  htmlspecialchars($_POST['contenu']);
         $message = 'Article Posté';
-        $requete3 = "INSERT INTO `blog`(`titre`, `contenu`, `image_post`, `date_time`) VALUES ('" . $_POST['titre'] . "','" . $varx . "','" . $chemin . "', NOW() )";
+  
+        $requete3 = "INSERT INTO `post`(`titre`, `authorId`, `contenu`, `image_post`, `date_time`) VALUES ('" . $_POST['titre'] . "','" . 1 . "' , '" . $varx . "','" . $chemin . "', NOW() )";
         $resultat3 = $bdd->query($requete3);
         if ($resultat3) {
             echo "<p><span>done</span></p>";
@@ -66,7 +66,7 @@ include './bdd.php';
       <div class="forms">
         <form class="myform" action="./creation.php" method="POST" enctype="multipart/form-data">
             <p><label class="label" for="nom"> titre :</label> <input type="texte" name="titre"></p>
-            <p><label class="label" for="nom">Contenu :</label> <input type="texte" name="contenu" id=""></p>
+            <p><label class="label" for="nom">Contenu :</label> <textarea name="contenu" id="textarea1" rows="5" cols="30" minlength="50"></textarea></p>
             <p><input type="file" name="miniature"></p>
 
             <p><input type="submit" value="OK"></p>

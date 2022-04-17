@@ -1,99 +1,105 @@
-<!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <?php
 include './bdd.php';
-include './fonction.php';
+include './mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
 
 ?>
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Margouilla-Tech Blog</title>
-    <link rel="stylesheet" href="./css/style.css" id="theme-link">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link rel="stylesheet" href="./css/background.css">
-    <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <script type="text/javascript" src="./js/anim.js"></script>
+  <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
+  <title>Document</title>
 </head>
 
 <body>
+  <div class="back"></div>
+  <div class="central">
+    <div class="containerprincipal">
+      <header class="logo box">
+        <a href="./index.php"> <img class="logom" src="./img/marg.png"></a>
+      </header>
 
-    <header>
-        <div class="topnav">
-            <a href="./index.php">Accueil</a>
-            <a class="btn-toggle">&#x263e;</a>
-            <a href="./backend/login.php">Login</a>
+      <div class="headerbar">
+        <h1>
+          <span style="--i:1">M</span>
+          <span style="--i:2">a</span>
+          <span style="--i:3">r</span>
+          <span style="--i:4">g</span>
+          <span style="--i:5">o</span>
+          <span style="--i:6">u</span>
+          <span style="--i:7">l</span>
+          <span style="--i:8">a</span>
+          <span style="--i:9">b &zwnj;</span>
+          <span style="--i:10">Tech &zwnj;</span>
+          <span style="--i:11">B</span>
+          <span style="--i:12">l</span>
+          <span style="--i:13">o</span>
+          <span style="--i:14">g</span>
+
+        </h1>
+      </div>
+
+      <nav class="menu">
+        <div class="cat1" onclick="toggleNav()">Catégories</div>
+        <div id="cat2"><a href="index.php" style="color: white">General</a></div>
+        <div id="cat3">
+          <form action="index.php" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form>
         </div>
-        <div class="header">
-            <img src="./css/background.jpg" </img>
+        <div id="cat4">
+        <form action="index.php" method="post"><input type="submit" name="cat4" value="Software" class="menuInput"></form>
         </div>
-    </header>
+        <div id="cat5">
+        <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>
+        </div>
+        <div class="cat6"><a href="" style="color: white">login</a></div>
+      </nav>
+
+      <main class="main">
+
+        <?php
+        indexpage();
+        ?>
+      </main>
 
 
-    <div class="background">
-        <?php MyBackground(); ?>
+
+
+      <aside class="sidebar box">
+        <!-- a propos -->
+        <h3>A propos</h3>
+        <img class="abimg" src="./img/avatar.png"></img>
+        <p class="abtext">Demo blog formation Simplon 2022</p>
+        <!-- post populaires -->
+        <h3>Post Populaires</h3>
+        <div class="postp">
+          <?php postpopfunction(); ?>
+        </div>
+        <!-- Social -->
+        <div class="social">
+          <h3>Contact</h3>
+          <a href="url"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
+          <a href="url"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
+        </div>
+      </aside>
+
+      <btn class="next">
+        <div class="newer"><i class="fa-solid fa-arrow-left-long"></i></div>
+        <div class="older"><i class="fa-solid fa-arrow-right-long"></i></div>
+      </btn>
+
+      <footer class="footer box">
+        <a href="" style="color: white">Copyright</a>
+      </footer>
+
+      <div class="spacer">&zwnj; </div>
     </div>
-
-    <article>
-
-        <div class="row" />
-
-        <div class="colonegauche">
-            <?php PostFunction(); ?>
-        </div>
-
-        <div class="colonedroite">
-            <div class="container">
-                <h2>A Propos de ce Blog</h2>
-                <div class="img1" style="height:100px;"></div>
-                <p>Some text..</p>
-            </div>
-            <div class="container">
-                <h3>Suivez Nous</h3>
-                <a href="url"><i class="fa-brands fa-facebook-square fa-3x" id="facebook"></i></a>
-                <a href="url"><i class="fa-brands fa-github-square fa-3x" id="github"></i></a></< />
-                <a href="url"><i class="fa-brands fa-twitter-square fa-3x" id="twitter"></i></a>
-
-            </div>
-
-
-
-            <div class="container">
-                <h3>Post Populaire</h3>
-                <?php PopularFunction(); ?>
-            </div>
-
-        </div>
-        </div>
-
-    </article>
-
-    <footer>
-        <div class="footer">
-            <h3>Copyright</h3>
-        </div>
-    </footer>
-    <script>
-        // Select the button
-        const btn = document.querySelector(".btn-toggle");
-        // Select the stylesheet <link>
-        const theme = document.querySelector("#theme-link");
-
-        // Listen for a click on the button
-        btn.addEventListener("click", function() {
-            if (theme.getAttribute("href") == "./css/style.css") {
-                theme.href = "./css/Light-theme.css";
-            } else {
-                theme.href = "./css/style.css";
-            }
-        });
-    </script>
-
+  </div>
 </body>
 
 </html>

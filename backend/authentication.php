@@ -1,5 +1,5 @@
 <?php      
-    $con = mysqli_connect("localhost", "root", "", "mysocial"); 
+    $con = mysqli_connect("localhost", "root", "", "blog"); 
     $username = $_POST['user'];  
     $password = $_POST['pass'];  
       
@@ -9,7 +9,7 @@
         $username = mysqli_real_escape_string($con, $username);  
         $password = mysqli_real_escape_string($con, $password);  
       
-        $sql = "SELECT * FROM users WHERE username = '$username' and password = '$password'";  
+        $sql = "SELECT * FROM user WHERE username = '$username' and password = '$password'";  
         $result = mysqli_query($con, $sql);  
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  

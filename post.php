@@ -1,58 +1,85 @@
+<html lang="en">
 <?php
 include './bdd.php';
-include './fonction.php';
+include './mesfonction.php';
+setlocale(LC_TIME, 'fr_FR');
+date_default_timezone_set('Europe/Paris');
+
 ?>
 
-
-<!DOCTYPE html>
-<html lang="fr">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" id="theme-link">
-    <link rel="stylesheet" href="./css/background.css">
-    <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
-    <title>Articles</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <script type="text/javascript" src="./js/anim.js"></script>
+  <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
+  <title>Document</title>
 </head>
 
-    <header>
-        <div class="topnav">
-            <a href="./index.php">Accueil</a>
-            <a class="btn-toggle">&#x263e;</a>
+<body>
+  <div class="back"></div>
+  <div class="central">
+    <div class="containerprincipal">
+      <header class="logo box">
+        <a href="./index.php"> <img class="logom" src="./img/marg.png"></a>
+      </header>
+
+      <div class="headerbar">
+        <h1>
+          <span style="--i:1">M</span>
+          <span style="--i:2">a</span>
+          <span style="--i:3">r</span>
+          <span style="--i:4">g</span>
+          <span style="--i:5">o</span>
+          <span style="--i:6">u</span>
+          <span style="--i:7">l</span>
+          <span style="--i:8">a</span>
+          <span style="--i:9">b &zwnj;</span>
+          <span style="--i:10">Tech &zwnj;</span>
+          <span style="--i:11">B</span>
+          <span style="--i:12">l</span>
+          <span style="--i:13">o</span>
+          <span style="--i:14">g</span>
+
+        </h1>
+      </div>
+
+      <nav class="menu">
+        <div class="cat1"><a href="index.php" style="color: white">Retour</a></div>
+      </nav>
+
+      <main class="mainPost">
+        <?php
+       FullPostFunction();
+        ?>
+      </main>
+
+
+      <aside class="sidebar box">
+        <!-- a propos -->
+        <h3>A propos</h3>
+        <img class="abimg" src="./img/avatar.png"></img>
+        <p class="abtext">Demo blog formation Simplon 2022</p>
+        <!-- post populaires -->
+        <h3>Post Populaires</h3>
+        <div class="postp">
+          <?php postpopfunction(); ?>
         </div>
-    </header>
-
-    <div class="background">
-        <?php MyBackground(); ?>
-    </div>
-
-
-    <div class="container2">
-    <?php FullPostFunction(); ?>
-    </div>
-
-    <footer>
-        <div class="footer">
-            <h3>Copyright</h3>
+        <!-- Social -->
+        <div class="social">
+          <h3>Contact</h3>
+          <a href="url"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
+          <a href="url"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
         </div>
-    </footer>
+      </aside>
+      <footer class="footer box">
+        <a href="" style="color: white">Copyright</a>
+      </footer>
+
+      <div class="spacer">&zwnj; </div>
+    </div>
+  </div>
 </body>
-<script>
-        // Select the button
-        const btn = document.querySelector(".btn-toggle");
-        // Select the stylesheet <link>
-        const theme = document.querySelector("#theme-link");
 
-        // Listen for a click on the button
-        btn.addEventListener("click", function() {
-            if (theme.getAttribute("href") == "./css/style.css") {
-                theme.href = "./css/Light-theme.css";
-            } else {
-                theme.href = "./css/style.css";
-            }
-        });
-    </script>
 </html>
