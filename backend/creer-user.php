@@ -15,9 +15,9 @@
 		</form>
 		<?php
 		if (isset($_POST['Username'])) {
-			$mysqli = new mysqli("localhost", "root", "", "mysocial");
+			$mysqli = new mysqli("localhost", "root", "", "blog");
             $mysqli->set_charset("utf8");
-            $requete = "INSERT INTO users VALUES(NULL, '" . $_POST['Username'] . "', '" . $_POST['Password'] . "')";
+            $requete = "INSERT INTO user VALUES(NULL, '" . $_POST['Username'] . "', '" . $_POST['Password'] . "')";
 		    $resultat = $mysqli->query($requete);
             if ($resultat)
                 echo "<p>Un utilisateur a été ajouté</p>";

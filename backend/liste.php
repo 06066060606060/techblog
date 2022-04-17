@@ -29,15 +29,15 @@ include './bdd.php';
                 <?php while ($post = $fullpost->fetch()) { ?>
                     <li>
                         <h2><?= $post['titre'] ?></h2><h5 style="color:aliceblue;">Visible:<?= $post['active']  ?></h5>
-                        <a href="./backend/modifier-post.php?id=<?= $post['id'] ?>">Editer</a>
-                        <a href="./backend/remove.php?id=<?= $post['id'] ?>"> Désactiver</a>
-                        <a href="./backend/active.php?id=<?= $post['id'] ?>"> Activer</a></br>
+                        <a href="./backend/modifier-post.php?id=<?= $post['id_post'] ?>">Editer</a>
+                        <a href="./backend/remove.php?id=<?= $post['id_post'] ?>"> Désactiver</a>
+                        <a href="./backend/active.php?id=<?= $post['id_post'] ?>"> Activer</a></br>
                         <img src="<?= $post['image_post'] ?>" width="100" />
                         <p><?= $post['contenu'] ?></p>
                         <span>&#8205; </span>
                         <?php  $date = date_create( $post['date_time']); ?>
                         <p><?= date_format($date, 'd/m/Y H:i'); ?></p>
-                        <a href="./backend/suppr.php?id=<?= $post['id'] ?>" style="color: red;"> Supprimer ce Post</a></br>
+                        <a href="./backend/suppr.php?id=<?= $post['id_post'] ?>" style="color: red;"> Supprimer ce Post</a></br>
                     </li>
                 <?php } ?>
 
