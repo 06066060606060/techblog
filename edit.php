@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
         $sql = "UPDATE post SET titre = ?, image_post = ?, contenu = ? WHERE id_post = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($titre, $image_post, $contenu_post, $id));
-       // Database::disconnect();
+        $bdd->connection = null;
         header("Location: index.php");
     }
 } else {
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
     $titre = $data['titre'];
     $image_post = $data['image_post'];
     $contenu_post = $data['contenu'];
-  //  Database::disconnect();
+    $bdd->connection = null;
 }
 
 ?>

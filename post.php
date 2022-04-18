@@ -4,7 +4,9 @@ include './bdd.php';
 include './mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
-error_reporting(0); //TODO hide error
+//error_reporting(0); //TODO hide error
+
+
 ?>
 
 <head>
@@ -19,9 +21,9 @@ error_reporting(0); //TODO hide error
 
 <body>
 
-<div class="background">
+  <div class="background">
     <!-- <?php MyBackground(); ?> -->
-</div>
+  </div>
 
   <div class="back"></div>
   <div class="central">
@@ -56,9 +58,9 @@ error_reporting(0); //TODO hide error
 
       <main class="mainPost">
         <?php
-       FullPostFunction();
+        FullPostFunction();
         ?>
-    
+
       </main>
 
 
@@ -66,12 +68,14 @@ error_reporting(0); //TODO hide error
         <!-- a propos -->
         <h3 class="commentaires">Commentaires:</h3>
         <?php
-       PostCommFunction();
+        PostCommFunction();
         ?>
+
         <div class="btncom"><a href="" style="color: white">Ajouter un commentaire</a></div>
+        <?php
+        commentaires();
+        ?>
       </aside>
-
-
       <footer class="footer box">
         <a href="" style="color: white">Copyright</a>
       </footer>

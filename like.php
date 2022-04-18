@@ -1,5 +1,5 @@
 <?php
-   include('.././bdd.php');
+   include('./bdd.php');
 if (isset($_GET['id']) and !empty($_GET['id'])) {
     $active_id = htmlspecialchars($_GET['id']);
 
