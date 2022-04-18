@@ -15,15 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
 
     $titre = $_POST['titre'];
     $image_post = $_POST['image_post'];
-    $contenu_post = $_POST['contenu_post'];
+    $contenu_post = $_POST['contenu'];
 
     $valid = true;
     if (empty($titre)) {
         $titreError = 'Entrer un titre';
-        $valid = false;
-    }
-    if (empty($photo_avatar)) {
-        $photo_avatarError = 'Entrer un lien vers l\'image';
         $valid = false;
     }
     if (empty($contenu_post)) {
@@ -42,15 +38,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
 
         $sql = "UPDATE post SET titre = ?, image_post = ?, contenu = ? WHERE id_post = ?";
         $q = $pdo->prepare($sql);
-        $q->execute(array($titre, $image_post, $contenu, $id));
-     //
+        $q->execute(array($titre, $image_post, $contenu_post, $id));
+       // Database::disconnect();
         header("Location: index.php");
     }
 } else {
 
     $pdo = $bdd;
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM post where id = ?";
+    $sql = "SELECT * FROM post where id_post = ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -80,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
         </div>
     <div class="container">
 
-        <form method="post" action="update.php?id=<?php echo $id; ?>">
+        <form method="post" action="edit.php?id=<?php echo $id; ?>">
 
             <div class="control-group <?php echo !empty($titreError) ? 'error' : ''; ?>">
                 <label class="control-label">Name</label>
@@ -96,25 +92,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
             </div>
             <p>
 
-            <div class="control-group <?php echo !empty($photo_avatarError) ? 'error' : ''; ?>">
-                <label class="control-label">Lien Avatar:</label>
-
-                <div class="controls">
-                    <input name="photo_avatar" type="text" placeholder="" value="<?php echo !empty($photo_avatar) ? $photo_avatar : ''; ?>">
-                    <?php if (!empty($photo_avatarError)) : ?>
-                        <span class="help-inline"><?php echo $photo_avatarError; ?></span>
-                    <?php endif; ?>
-                </div>
-                <p>
-
-            </div>
-            <p>
 
             <div class="control-group <?php echo !empty($contenu_postError) ? 'error' : ''; ?>">
                 <label class="control-label">Contenu du post:</label>
 
                 <div class="controls">
-                    <input class="textcont" name="contenu_post" type="textarea" placeholder="" value="<?php echo !empty($contenu_post) ? $contenu_post : ''; ?>"></>
+                    <input class="textcont" name="contenu" type="textarea" placeholder="" value="<?php echo !empty($contenu_post) ? $contenu_post : ''; ?>"></>
                     <?php if (!empty($contenu_postError)) : ?>
                         <span class="help-inline"><?php echo $contenu_postError; ?></span>
                     <?php endif; ?>

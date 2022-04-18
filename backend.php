@@ -12,7 +12,9 @@
 <body>
 <div class="back"></div>
     <div class="container">
-        <h2>Liste des Posts</h2>
+        <div class="navbarb">
+        <div id="btnaccueil"><a href="index.html" style="color: white">Page d'accueil</a></div>
+        </div>
         <div class="row">
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
@@ -24,8 +26,7 @@
                             <th>image du post</th>
                         <p>
                             <th>contenu du post</th>
-                        <p>
-                            <th>Activé</th>
+                       
                         <p>
                         <th>Catégorie</th>
                         <p>
@@ -33,8 +34,13 @@
                         <p>
                         <th>Edition</th>
                         <p>
-                        <th>Suppression</th>
+                        <th>Activer</th>
                         <p>
+                            <th>Désactiver</th>
+                        <p>
+                            <th>Actif</th>
+                        <p>
+
                     </thead>
 
                     <tbody>
@@ -46,8 +52,7 @@
                             echo '<td>' . $row['titre'] . '</td><p>';
                             echo '<td>' . $row['date_time'] . '</td><p>';
                             echo '<td><img src="' . $row['image_post'] . '"></td><p>';
-                            echo '<td>' . $row['contenu'] . '</td><p>';
-                            echo '<td>' . $row['active'] . '</td><p>';
+                            echo '<td><p class="short">' . $row['contenu'] . '</p></td><p>';
                             echo '<td>' . $row['categoryId'] . '</td><p>';
                             echo '<td>';
                             echo '<a class="btn" href="post.php?id=' . $row['id_post'] . '">Lire</a>'; // un autre td pour le bouton d'edition
@@ -56,8 +61,12 @@
                             echo '<a class="btn btn-success" href="edit.php?id=' . $row['id_post'] . '">Editer</a>'; // un autre td pour le bouton d'update
                             echo '</td><p>';
                             echo '<td>';
-                            echo '<a class="btn btn-danger" href="delete.php?id=' . $row['id_post'] . ' ">Supprimer</a>'; // un autre td pour le bouton de suppression
+                            echo '<a class="btn btn-active" href="activer.php?id=' . $row['id_post'] . ' ">Activer</a>'; // un autre td pour le bouton de suppression
                             echo '</td><p>';
+                            echo '<td>';
+                            echo '<a class="btn btn-danger" href="desactiver.php?id=' . $row['id_post'] . ' ">Désactiver</a>'; // un autre td pour le bouton de suppression
+                            echo '</td><p>';
+                            echo '<td>' . $row['active'] . '</td><p>';
                             echo '</tr><p>';
                         }
 
