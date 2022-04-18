@@ -13,7 +13,8 @@
 <div class="back"></div>
     <div class="container">
         <div class="navbarb">
-        <div id="btnaccueil"><a href="index.html" style="color: white">Page d'accueil</a></div>
+        <div id="btnaccueil"><a href="./index.php" style="color: white">Page d'accueil</a></div>
+        <div id="btnnewpost"><a href="./creer.html" style="color: white">Creer Nouveau Post</a></div>
         </div>
         <div class="row">
             <div class="table-responsive">

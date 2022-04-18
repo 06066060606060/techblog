@@ -5,8 +5,6 @@ include './mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
 //error_reporting(0); //TODO hide error
-
-
 ?>
 
 <head>
@@ -14,7 +12,7 @@ date_default_timezone_set('Europe/Paris');
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/stylesheet.css">
-  <script type="text/javascript" src="./js/anim.js"></script>
+
   <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
@@ -71,7 +69,7 @@ date_default_timezone_set('Europe/Paris');
         PostCommFunction();
         ?>
 
-        <div class="btncom"><a href="" style="color: white">Ajouter un commentaire</a></div>
+        <div class="btncom" onclick="fonctionCom()">Ajouter un commentaire</div>
         <?php
         commentaires();
         ?>
@@ -83,6 +81,7 @@ date_default_timezone_set('Europe/Paris');
       <div class="spacer">&zwnj; </div>
     </div>
   </div>
+  <script type="text/javascript" src="./js/anim.js"></script>
 </body>
 
 </html>

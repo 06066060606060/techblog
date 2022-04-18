@@ -297,6 +297,7 @@ input.menuInput {
   margin-top: 10px;
   border-radius: 10px;
   background-color: rgba(30, 30, 30, 0.622);
+  user-select: none;
 }
 
 .btncom:hover {
@@ -486,6 +487,7 @@ div.box .fa-solid.fa-message {
 /* BARRE DROITE___________________________________________________ */
 .sidebar {
   grid-area: sidebar;
+
 }
 
 .sidebar h3 {
@@ -557,9 +559,19 @@ footer {
 }
 
 /* TEXTBOX COMMENTAIRES__________________________________________________ */
-.forms {
+
+#forms1 {
   padding: 10px;
+ visibility: hidden;
+
 }
+
+#forms1.active{
+  visibility: visible;
+  padding: 10px;
+ 
+}
+
 
 /* .myform {
 }
@@ -697,6 +709,7 @@ footer {
   .sidebar {
     grid-area: sidebar;
     max-width: 200px;
+    height: 100%;
   }
   
 }

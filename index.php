@@ -61,7 +61,7 @@ date_default_timezone_set('Europe/Paris');
         <div id="cat3">
           <form action="index.php" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form>
         </div>
-        <div id="cat4">
+        <div id="cat4" onclick="">
         <form action="index.php" method="post"><input type="submit" name="cat4" value="Software" class="menuInput"></form>
         </div>
         <div id="cat5">

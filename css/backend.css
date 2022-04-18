@@ -16,10 +16,23 @@ margin-bottom: 10px;
 }
 
 #btnaccueil{
+
   text-align: center;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.061);
   padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(30, 30, 30, 0.622);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#btnnewpost{
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.061);
+  padding: 5px;
+  margin-top: 10px;
   border-radius: 10px;
   background-color: rgba(30, 30, 30, 0.622);
   padding-left: 10px;

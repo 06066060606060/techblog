@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="./css/stylesheet.css">
-      <script type="text/javascript" src="./js/anim.js"></script>
+
       <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
       <title>Document</title>
     </head>
@@ -59,7 +59,7 @@
     
     Given how gargantuan the Xbox's library of games is, it may look like a herculean task to pick the best games on Xbox Game Pass. So, we've compiled a few lists of Xbox Game Pass titles now available and new games coming soon to Xbox consoles, PC, and cloud-enabled mobile devices all in one place. This way, you'll be able to pick out your favorite titles more easily and get the best deals out of your Xbox Game Pass subscription. Keep in mind that some of these titles are region locked and may not be available in your home region.</p>
                     <div class="social">
-                        <span class="icon-like">14                        <a href="./backend/like.php?id=14">
+                        <span class="icon-like">14                        <a href="./like.php?id=14">
                                 <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                         </span>
                         <span class="link-post"> &zwnj; </span>
@@ -79,9 +79,9 @@
                     <h5 class="titlecom">Nul ce post !</h5>
                     <p class="textcom">commentaire de test ici lfe fegh hyth grt grtg</p>       
                     <h6 class="datecom"> le 15/04/2022 17:44 par troll</h6> 
-                    <div class="btncom"><a href="" style="color: white">Ajouter un commentaire</a></div>
+                    <div class="btncom" onclick="fonctionCom()">Ajouter un commentaire</div>
 
-                    <div class="forms">
+                    <div id="forms1">
                       <form class="myform" action="./creation.php" method="POST" enctype="multipart/form-data">
                           <p>
                             <input type="texte" name="titre" class="areatitre" placeholder="Pseudo">
@@ -104,6 +104,7 @@
           <div class="spacer">&zwnj; </div>
         </div>
       </div>
+      <script type="text/javascript" src="./js/anim.js"></script>
     </body>
     
     </html>

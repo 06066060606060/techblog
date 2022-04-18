@@ -204,7 +204,7 @@ function commentaires()
     } else {
 
     ?>
-        <div class="forms">
+        <div id="forms1">
                       <form class="myform" action="./post.php?id=<?php echo $_SESSION["idvar"]; ?>" method="POST" enctype="multipart/form-data">
                           <p>
                             <input type="texte" name="pseudo" class="areapseudo" placeholder="Pseudo">
