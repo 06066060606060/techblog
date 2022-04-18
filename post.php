@@ -4,7 +4,7 @@ include './bdd.php';
 include './mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
-
+error_reporting(0); //TODO hide error
 ?>
 
 <head>
@@ -18,6 +18,11 @@ date_default_timezone_set('Europe/Paris');
 </head>
 
 <body>
+
+<div class="background">
+    <!-- <?php MyBackground(); ?> -->
+</div>
+
   <div class="back"></div>
   <div class="central">
     <div class="containerprincipal">
@@ -53,26 +58,20 @@ date_default_timezone_set('Europe/Paris');
         <?php
        FullPostFunction();
         ?>
+    
       </main>
 
 
       <aside class="sidebar box">
         <!-- a propos -->
-        <h3>A propos</h3>
-        <img class="abimg" src="./img/avatar.png"></img>
-        <p class="abtext">Demo blog formation Simplon 2022</p>
-        <!-- post populaires -->
-        <h3>Post Populaires</h3>
-        <div class="postp">
-          <?php postpopfunction(); ?>
-        </div>
-        <!-- Social -->
-        <div class="social">
-          <h3>Contact</h3>
-          <a href="url"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
-          <a href="url"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
-        </div>
+        <h3 class="commentaires">Commentaires:</h3>
+        <?php
+       PostCommFunction();
+        ?>
+        <div class="btncom"><a href="" style="color: white">Ajouter un commentaire</a></div>
       </aside>
+
+
       <footer class="footer box">
         <a href="" style="color: white">Copyright</a>
       </footer>

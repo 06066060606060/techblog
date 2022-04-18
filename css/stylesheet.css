@@ -294,6 +294,31 @@ a {
   background: rgba(135, 134, 134, 0.45);
 }
 
+.btncom{
+text-align: center;
+font-size: 11px;
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.061);
+padding: 5px;
+margin-top: 10px;
+border-radius: 10px;
+background-color: rgba(30, 30, 30, 0.622);
+}
+
+
+.btncom:hover {
+background: rgba(30, 30, 30, 0.894);
+transition: visibility 0s, opacity 0.5s linear;
+transition: all 400ms linear;
+}
+
+.btncom:active {
+background: rgba(135, 134, 134, 0.45);
+}
+
+
+
+
 
 /* GRID DES ARTICLES_________________________________________ */
 .main {
@@ -315,6 +340,34 @@ a {
 .imgfullpost{
   width: 500px;
   padding-bottom: 20px;
+}
+
+.contentFullPost{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.commentaires{
+padding-left:10px;
+padding-right: 10px;
+padding-bottom: 5px;
+border-bottom: 1px solid #ccc;
+}
+
+.titlecom{
+padding-top: 10px;
+}
+
+.textcom{
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.datecom{
+  font-size: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 /* S'APPLIQUE UNIQUEMENT AU DIV class BOX */
@@ -365,7 +418,8 @@ div.box .icon-like {
 }
 
 div.box .link-post a {
-  padding-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 /* like icon */
 div.box .fa-solid.fa-heart {
@@ -385,11 +439,6 @@ div.box .fa-solid.fa-heart:visited {
 div.box .fa-solid.fa-message {
   padding-left: 5px;
   margin-right: 5px;
-}
-
-div.box .fa-solid.fa-message:active {
-  color: rgb(61, 68, 249);
-  transform: rotateX(7deg) translateY(-3px) scale(1.05);
 }
 
 /* GRID BUTTON ANCIEN POST NOUVEAU POST */
@@ -533,7 +582,7 @@ footer {
 }
 
 /* RESPONSIVE ______PLUS GRAND QUE______________________________________________*/
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1115px) {
   .containerprincipal {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto auto auto auto auto;

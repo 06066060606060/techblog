@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //AFFICHAGE DE POST REDUIT PAGE D'ACCUEIL_____________________________
 function indexpage()
 {
@@ -90,6 +90,7 @@ function FullPostFunction()
     include './bdd.php';
     if (isset($_GET['id']) and !empty($_GET["id"])) {
         $get_id = htmlspecialchars($_GET['id']);
+        $_SESSION["idvar"]=$get_id ;
         $post = $bdd->prepare('SELECT * FROM post WHERE id_post = ?');
         $post->execute(array($get_id));
 
@@ -114,16 +115,13 @@ function FullPostFunction()
                 <h2><?= $titre ?></h2>
                 <h5>Posté le <?= date_format($date, 'd/m/Y H:i'); ?> par admin</h5>
                 <img class="imgfullpost" src="<?= $image_post ?>"></img>
-                <p class=""><?= $contenu ?></p>
+                <p class="contentFullPost"><?= $contenu ?></p>
                 <div class="social">
                     <span class="icon-like"><?= $post_like ?>
                         <a href="./backend/like.php?id=<?= $id ?>">
                             <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                     </span>
-                    <span class="link-post"> </span>
-                    <span class="comm-post">3
-                        <i class="fa-solid fa-message"></i>
-                    </span>
+                    <span class="link-post"> &zwnj; </span>
                     </p>
                 </div>
             </div>
@@ -133,12 +131,47 @@ function FullPostFunction()
     <?php
         $bdd->connection = null;
     } ?>
-<?php }
+    <?php }
+
+
+function PostCommFunction()
+{
+
+    include './bdd.php';
+    $var = $_SESSION["idvar"];
+    $postx = $bdd->query('SELECT * FROM post_comment WHERE postId = '.$var.' ');
+    while ($post = $postx->fetch()) {
+        $content[] = [
+            'postId' => $post['postId'],
+            'titre' => $post['titre'],
+            'contenu' => $post['contenu'],
+            'pseudo' => $post['pseudo'],
+            $date = date_create($post['date_time']),
+        ];
+    }
+   if ($content != null){
+    for ($i = 0; $i < count($content); $i++) { ?>
+            <h5 class="titlecom"><?php echo $content[$i]["titre"]; ?></h5>
+            <p class="textcom"><?php echo $content[$i]['contenu']; ?></p>
+            <h6 class="datecom"><?= date_format($date, 'd/m/Y H:i'); ?> par <?php echo $content[$i]['pseudo']; ?></h6>
+    <?php
+        $bdd->connection = null;
+    }
+} else {
+    echo "Pas de commentaires!";
+}
+    
+    ?>
+<?php
+
+}
 
 
 
-
-
+function MyBackground()
+{
+    echo str_repeat("<span></span>", 36);
+}
 
 
 
