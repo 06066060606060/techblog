@@ -7,17 +7,27 @@ date_default_timezone_set('Europe/Paris');
 
 ?>
 
+
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" href="./css/background.css">
   <script type="text/javascript" src="./js/anim.js"></script>
   <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 
 <body>
+
+
+<div class="background">
+    <!-- <?php MyBackground(); ?> -->
+</div>
+
+
   <div class="back"></div>
   <div class="central">
     <div class="containerprincipal">
@@ -57,7 +67,7 @@ date_default_timezone_set('Europe/Paris');
         <div id="cat5">
         <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>
         </div>
-        <div class="cat6"><a href="" style="color: white">login</a></div>
+        <div class="cat6"><a href="./backend.php" style="color: white">login</a></div>
       </nav>
 
       <main class="main">
@@ -83,8 +93,8 @@ date_default_timezone_set('Europe/Paris');
         <!-- Social -->
         <div class="social">
           <h3>Contact</h3>
-          <a href="url"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
-          <a href="url"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
+          <a href="https://github.com/06066060606060/"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
+          <a href="https://twitter.com/@xmicky/"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
         </div>
       </aside>
 
