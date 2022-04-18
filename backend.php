@@ -1,3 +1,12 @@
+<?php
+session_start();
+// If the  not logged redirect to index...
+
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.php');
+	exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,6 +24,7 @@
         <div class="navbarb">
         <div id="btnaccueil"><a href="./index.php" style="color: white">Page d'accueil</a></div>
         <div id="btnnewpost"><a href="./creer.html" style="color: white">Creer Nouveau Post</a></div>
+        <p>Welcome back, <?=$_SESSION['name']?>!</p>
         </div>
         <div class="row">
             <div class="table-responsive">

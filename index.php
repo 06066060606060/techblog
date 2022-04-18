@@ -23,12 +23,29 @@ date_default_timezone_set('Europe/Paris');
 <body>
 
 
-<div class="background">
+  <div class="background">
     <!-- <?php MyBackground(); ?> -->
-</div>
+  </div>
 
+  <div id="login">
+    <a href="index.php">
+      <i class="fa-solid fa-circle-xmark"></i>
+    </a>
+    <h1>Login</h1>
+    <form action="authenticate.php" method="post">
+      <label for="username">
+        <i class="fa-solid fa-user"></i>
+      </label>
+      <input type="text" name="username" placeholder="Username" id="username" required>
+      <label for="password">
+        <i class="fa-solid fa-lock"></i>
+      </label>
+      <input type="password" name="password" placeholder="Password" id="password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
 
-  <div class="back"></div>
+  <div class="back" id="back"></div>
   <div class="central">
     <div class="containerprincipal">
       <header class="logo box">
@@ -62,12 +79,12 @@ date_default_timezone_set('Europe/Paris');
           <form action="index.php" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form>
         </div>
         <div id="cat4" onclick="">
-        <form action="index.php" method="post"><input type="submit" name="cat4" value="Software" class="menuInput"></form>
+          <form action="index.php" method="post"><input type="submit" name="cat4" value="Software" class="menuInput"></form>
         </div>
         <div id="cat5">
-        <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>
+          <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>
         </div>
-        <div class="cat6"><a href="./backend.php" style="color: white">login</a></div>
+        <div class="cat6" onclick="toggleLogin()">login</div>
       </nav>
 
       <main class="main">

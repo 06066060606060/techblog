@@ -15,3 +15,10 @@ function toggleNav() {
     var updateElement = document.getElementById("forms1");
     updateElement.classList.toggle("active");
   }
+
+  function toggleLogin() {
+    var updateElement6 = document.getElementById("login");
+    var updateElement7 = document.getElementById("back");
+    updateElement6.classList.toggle("active");
+    updateElement7.classList.toggle("active");
+  }

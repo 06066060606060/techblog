@@ -17,6 +17,25 @@
 </head>
 
 <body>
+
+  <div id="login">
+    <a href="index.php">
+      <i class="fa-solid fa-circle-xmark"></i>
+    </a>
+    <h1>Login</h1>
+    <form action="backend.html" method="post">
+      <label for="username">
+      <i class="fa-solid fa-user"></i>
+      </label>
+      <input type="text" name="username" placeholder="Username" id="username" required>
+      <label for="password">
+      <i class="fa-solid fa-lock"></i>
+      </label>
+      <input type="password" name="password" placeholder="Password" id="password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
   <div class="back"></div>
   <div class="central">
     <div class="containerprincipal">
@@ -50,7 +69,7 @@
         <div id="cat3">Hardware</div>
         <div id="cat4">Software</div>
         <div id="cat5">Photos</div>
-        <div class="cat6"><a href="backend.html" style="color: white">login</a></div>
+        <div class="cat6" onclick="toggleLogin()">login</div>
       </nav>
 
       <main class="main">
