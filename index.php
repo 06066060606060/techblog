@@ -17,20 +17,18 @@ date_default_timezone_set('Europe/Paris');
   <link rel="stylesheet" href="./css/background.css">
   <script type="text/javascript" src="./js/anim.js"></script>
   <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
-  <title>Document</title>
+  <title>Margoula Tech Blog</title>
 </head>
 
 <body>
 
-
+<div id="overlay"></div>
   <div class="background">
     <!-- <?php MyBackground(); ?> -->
   </div>
 
   <div id="login">
-    <a href="index.php">
-      <i class="fa-solid fa-circle-xmark"></i>
-    </a>
+      <i class="fa-solid fa-circle-xmark" onclick="off()"></i>
     <h1>Login</h1>
     <form action="authenticate.php" method="post">
       <label for="username">
@@ -84,7 +82,7 @@ date_default_timezone_set('Europe/Paris');
         <div id="cat5">
           <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>
         </div>
-        <div class="cat6" onclick="toggleLogin()">login</div>
+        <div class="cat6" onclick="on()">login</div>
       </nav>
 
       <main class="main">

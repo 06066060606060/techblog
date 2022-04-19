@@ -41,20 +41,18 @@ a {
   height: 100vh;
 }
 
-.back.active{
-  animation: fronte 0.8s linear forwards; 
-} 
-@keyframes fronte {
-  from { z-index: -1;
-     /* transform: scale(0.9); */
-     filter: brightness(100%);
-     }
-  to {
-
-     z-index: 1; 
-     /* transform: scale(1.1);  */
-     filter: brightness(50%);
-     }
+#overlay {
+  position: fixed; 
+  display: none;
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.77);
+  z-index: 1; 
+  cursor: pointer;
 }
 
 /* CONTENEUR GLOBAL___MODE____MOBILE____________________ */
@@ -751,11 +749,11 @@ footer {
   
 }
 
-#login.active {
+/* #login.active {
   z-index: 2;
   visibility: visible;
 animation: fronte1 1s linear forwards; 
-} 
+}  */
 
 @keyframes fronte1 {
   from { z-index: 1;
