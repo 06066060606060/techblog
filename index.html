@@ -17,6 +17,25 @@
 </head>
 
 <body>
+
+  <div id="login">
+    <a href="index.html">
+      <i class="fa-solid fa-circle-xmark"></i>
+    </a>
+    <h1>Login</h1>
+    <form action="backend.html" method="post">
+      <label for="username">
+      <i class="fa-solid fa-user"></i>
+      </label>
+      <input type="text" name="username" placeholder="Username" id="username" required>
+      <label for="password">
+      <i class="fa-solid fa-lock"></i>
+      </label>
+      <input type="password" name="password" placeholder="Password" id="password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
   <div class="back"></div>
   <div class="central">
     <div class="containerprincipal">
@@ -50,7 +69,7 @@
         <div id="cat3">Hardware</div>
         <div id="cat4">Software</div>
         <div id="cat5">Photos</div>
-        <div class="cat6"><a href="backend.html" style="color: white">login</a></div>
+        <div class="cat6" onclick="toggleLogin()">login</div>
       </nav>
 
       <main class="main">
@@ -64,7 +83,7 @@
               Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
             <div class="social">
               <p>
-                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                <span class="icon-like">8<a href="./like.php?id=14">
                     <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                 </span>
                 <span class="link-post"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
@@ -87,7 +106,7 @@
               Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
             <div class="social">
               <p>
-                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                <span class="icon-like">8<a href="./like.php?id=14">
                     <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                 </span>
                 <span class="link-post"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
@@ -109,7 +128,7 @@
               Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
             <div class="social">
               <p>
-                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                <span class="icon-like">8<a href="./like.php?id=14">
                     <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                 </span>
                 <span class="link-post"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
@@ -131,7 +150,7 @@
               Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
             <div class="social">
               <p>
-                <span class="icon-like">8<a href="./backend/like.php?id=14">
+                <span class="icon-like">8<a href="./like.php?id=14">
                     <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                 </span>
                 <span class="link-post"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
