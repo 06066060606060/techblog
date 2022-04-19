@@ -126,11 +126,6 @@ a {
   animation-delay: calc(0.1s * var(--i));
 }
 
-.headerbar:hover span {
-  animation: animate 3s ease-in-out infinite;
-  animation-delay: calc(0.1s * var(--i));
-}
-
 @keyframes animate {
   0%,
   40%,
