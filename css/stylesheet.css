@@ -817,3 +817,17 @@ animation: fronte1 1s linear forwards;
   background: rgba(91, 91, 91, 0.894);
   transition: background-color 0.2s;
 }
+
+.control{
+  text-align: center;
+
+}
+
+.control-label{
+  color: white;
+}
+
+.control-img{
+  width: 300px;
+  height: auto;
+}

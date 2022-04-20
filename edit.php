@@ -35,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
     if ($valid) {
         $pdo = $bdd;
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         $sql = "UPDATE post SET titre = ?, image_post = ?, contenu = ? WHERE id_post = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($titre, $image_post, $contenu_post, $id));
@@ -63,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Crud-Update</title>
+    <title>update</title>
     <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -126,7 +125,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
 
             <div class="form-actions">
                 <input type="submit" class="btn btn-success" name="submit" value="submit">
-                <a class="btn" href="index.php">Retour</a>
             </div>
             <p>
 
