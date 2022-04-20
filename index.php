@@ -17,6 +17,7 @@ date_default_timezone_set('Europe/Paris');
   <link rel="stylesheet" href="./css/background.css">
   <script type="text/javascript" src="./js/anim.js"></script>
   <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Margoula Tech Blog</title>
 </head>
 
@@ -46,11 +47,11 @@ date_default_timezone_set('Europe/Paris');
   <div class="back" id="back"></div>
   <div class="central">
     <div class="containerprincipal">
-      <header class="logo box">
+      <header class="logo box animate__animated animate__backInDown">
         <a href="./index.php"> <img class="logom" src="./img/marg.png"></a>
       </header>
 
-      <div class="headerbar">
+      <div class="headerbar animate__animated animate__backInDown">
         <h1>
           <span style="--i:1">M</span>
           <span style="--i:2">a</span>
@@ -71,7 +72,7 @@ date_default_timezone_set('Europe/Paris');
       </div>
 
       <nav class="menu">
-        <div class="cat1" onclick="toggleNav()">Catégories</div>
+        <div class="cat1 animate__animated animate__backInDown" onclick="toggleNav()">Catégories</div>
         <div id="cat2"><a href="index.php" style="color: white">General</a></div>
         <div id="cat3">
           <form action="index.php" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form>
@@ -82,7 +83,7 @@ date_default_timezone_set('Europe/Paris');
         <div id="cat5">
           <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>
         </div>
-        <div class="cat6" onclick="on()">login</div>
+        <div class="cat6 animate__animated animate__backInDown" onclick="on()">login</div>
       </nav>
 
       <main class="main">
@@ -95,7 +96,7 @@ date_default_timezone_set('Europe/Paris');
 
 
 
-      <aside class="sidebar box">
+      <aside class="sidebar box animate__animated animate__backInUp">
         <!-- a propos -->
         <h3>A propos</h3>
         <img class="abimg" src="./img/avatar.png"></img>
@@ -114,11 +115,11 @@ date_default_timezone_set('Europe/Paris');
       </aside>
 
       <btn class="next">
-        <div class="newer"><i class="fa-solid fa-arrow-left-long"></i></div>
-        <div class="older"><i class="fa-solid fa-arrow-right-long"></i></div>
+        <div class="newer animate__animated animate__backInLeft"><i class="fa-solid fa-arrow-left-long"></i></div>
+        <div class="older animate__animated animate__backInRight"><i class="fa-solid fa-arrow-right-long"></i></div>
       </btn>
 
-      <footer class="footer box">
+      <footer class="footer box animate__animated animate__backInUp">
         <a href="" style="color: white">Copyright</a>
       </footer>
 

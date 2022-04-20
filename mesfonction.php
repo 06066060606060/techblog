@@ -32,7 +32,7 @@ function indexpage()
     }
     for ($i = 0; $i < count($content); $i++) { ?>
         <article>
-            <div class="box">
+            <div class="box animate__animated">
                 <h2><?= $content[$i]["titre_post"]; ?></h2>
                 <h5>Posté le <?= date_format($date, 'd/m/Y H:i'); ?> par <?= $content[$i]['authorId']; ?></h5>
                 <img class="imgpost" src="<?= $content[$i]["image_post"]; ?>"></img>

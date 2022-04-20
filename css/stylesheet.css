@@ -441,6 +441,11 @@ div.box .fa-solid.fa-message {
   margin-right: 5px;
 }
 
+.box.animate__animated.one{
+  animation: backInDown;
+  /* animation: bounce; referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
 
 /* GRID BUTTON  < >_________________________________________________ */
 .next {
