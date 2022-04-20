@@ -421,6 +421,7 @@ div.box .link-post a {
   padding-right: 10px;
   padding-left: 10px;
 }
+
 /* like icon */
 div.box .fa-solid.fa-heart {
   margin-left: 5px;
@@ -443,7 +444,6 @@ div.box .fa-solid.fa-message {
 
 .box.animate__animated.one{
   animation: backInDown;
-  /* animation: bounce; referring directly to the animation's @keyframe declaration */
   animation-duration: 2s;
 }
 

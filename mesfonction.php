@@ -42,7 +42,7 @@ function indexpage()
                         <a href="./like.php?id=<?= $content[$i]['id_post']; ?>">
                             <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                     </span>
-                    <span class="link-post"><a href="post.php?id=<?= $content[$i]['id_post']; ?>" style="color:rgb(37, 106, 255);"><?= "Lire la suite"; ?></a></span>
+                    <span class="link-post animate__animated animate__flash animate__delay-2s"><a href="post.php?id=<?= $content[$i]['id_post']; ?>" style="color:rgb(37, 106, 255);"><?= "Lire la suite"; ?></a></span>
                     <span class="comm-post">3
                         <i class="fa-solid fa-message"></i>
                     </span>
