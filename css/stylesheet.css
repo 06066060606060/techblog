@@ -95,6 +95,10 @@ a {
   user-select: none;
 }
 
+.logom:hover {
+  animation: bounce 1s;
+}
+
 /* HEADERBAR____________________________________________________ */
 .headerbar {
   grid-area: headerbar;
@@ -172,6 +176,7 @@ input.menuInput {
   background: rgba(30, 30, 30, 0.894);
   transition: visibility 0s, opacity 0.5s linear;
   transition: all 400ms linear;
+
 }
 
 .cat1:active {
@@ -417,6 +422,9 @@ div.box .icon-like {
   color: white;
 }
 
+
+
+
 div.box .link-post a {
   padding-right: 10px;
   padding-left: 10px;
@@ -428,6 +436,10 @@ div.box .fa-solid.fa-heart {
   margin-right: 5px;
   color: white;
 }
+
+div.box .fa-solid.fa-heart:hover {
+  animation: shake 5s;
+    }
 
 div.box .fa-solid.fa-heart:active {
   color: rgb(255, 0, 0);
