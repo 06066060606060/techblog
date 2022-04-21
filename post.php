@@ -12,7 +12,7 @@ date_default_timezone_set('Europe/Paris');
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/stylesheet.css">
-
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
@@ -26,11 +26,11 @@ date_default_timezone_set('Europe/Paris');
   <div class="back"></div>
   <div class="central">
     <div class="containerprincipal">
-      <header class="logo box">
+      <header class="logo box animate__animated animate__backInDown">
         <a href="./index.php"> <img class="logom" src="./img/marg.png"></a>
       </header>
 
-      <div class="headerbar">
+      <div class="headerbar animate__animated animate__backInDown">
         <h1>
           <span style="--i:1">M</span>
           <span style="--i:2">a</span>
@@ -51,7 +51,7 @@ date_default_timezone_set('Europe/Paris');
       </div>
 
       <nav class="menu">
-        <div class="cat1"><a href="index.php" style="color: white">Retour</a></div>
+        <div class="cat1 animate__animated animate__backInDown"><a href="index.php" style="color: white">Retour</a></div>
       </nav>
 
       <main class="mainPost">
@@ -62,7 +62,7 @@ date_default_timezone_set('Europe/Paris');
       </main>
 
 
-      <aside class="sidebar box">
+      <aside class="sidebar box animate__animated animate__backInDown">
         <!-- a propos -->
         <h3 class="commentaires">Commentaires:</h3>
         <?php
@@ -74,7 +74,7 @@ date_default_timezone_set('Europe/Paris');
         commentaires();
         ?>
       </aside>
-      <footer class="footer box">
+      <footer class="footer box animate__animated animate__backInUp">
         <a href="" style="color: white">Copyright</a>
       </footer>
 
