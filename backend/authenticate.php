@@ -37,7 +37,7 @@ if ($_POST['password'] === $password) {
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
 		echo 'Welcome ' . $_SESSION['name'] . '!';
-		header('Location: backend.php');
+		header('Location: ./backend.php');
 	} else {
 		// Incorrect password
 		echo 'Incorrect username and/or password!';

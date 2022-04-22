@@ -1,7 +1,7 @@
 <html lang="en">
 <?php
-include './bdd.php';
-include './mesfonction.php';
+include './backend/bdd.php';
+include './backend/mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
 
@@ -31,7 +31,7 @@ date_default_timezone_set('Europe/Paris');
   <div id="login">
       <i class="fa-solid fa-circle-xmark" onclick="off()"></i>
     <h1>Login</h1>
-    <form action="authenticate.php" method="post">
+    <form action="./backend/authenticate.php" method="post">
       <label for="username">
         <i class="fa-solid fa-user"></i>
       </label>
@@ -78,7 +78,7 @@ date_default_timezone_set('Europe/Paris');
           <form action="index.php" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form>
         </div>
         <div id="cat4" onclick="">
-          <form action="index.php" method="post"><input type="submit" name="cat4" value="Software" class="menuInput"></form>
+          <form action="index.php" method="post"><input type="submit" name="cat4" value="Gaming" class="menuInput"></form>
         </div>
         <div id="cat5">
           <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>

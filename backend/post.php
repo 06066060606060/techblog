@@ -1,7 +1,7 @@
 <html lang="en">
 <?php
-include './bdd.php';
-include './mesfonction.php';
+include 'bdd.php';
+include 'mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
 //error_reporting(0); //TODO hide error
@@ -11,7 +11,7 @@ date_default_timezone_set('Europe/Paris');
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" href=".././css/stylesheet.css">
   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
   <title>Document</title>
@@ -27,7 +27,7 @@ date_default_timezone_set('Europe/Paris');
   <div class="central">
     <div class="containerprincipal">
       <header class="logo box animate__animated animate__backInDown">
-        <a href="./index.php"> <img class="logom" src="./img/marg.png"></a>
+        <a href=".././index.php"> <img class="logom" src=".././img/marg.png"></a>
       </header>
 
       <div class="headerbar animate__animated animate__backInDown">
@@ -51,7 +51,7 @@ date_default_timezone_set('Europe/Paris');
       </div>
 
       <nav class="menu">
-        <div class="cat1 animate__animated animate__backInDown"><a href="index.php" style="color: white">Retour</a></div>
+        <div class="cat1 animate__animated animate__backInDown"><a href=".././index.php" style="color: white">Retour</a></div>
       </nav>
 
       <main class="mainPost">
@@ -81,7 +81,7 @@ date_default_timezone_set('Europe/Paris');
       <div class="spacer">&zwnj; </div>
     </div>
   </div>
-  <script type="text/javascript" src="./js/anim.js"></script>
+  <script type="text/javascript" src=".././js/anim.js"></script>
 </body>
 
 </html>

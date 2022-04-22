@@ -5,7 +5,7 @@ if (!empty($_GET['id'])) {
     $id = $_REQUEST['id'];
 }
 if (null == $id) {
-    header("Location: index.php");
+    header("Location: .././index.php");
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise nos erreurs
     $titreError = null;
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
         $q = $pdo->prepare($sql);
         $q->execute(array($titre, $image_post, $contenu_post, $id));
         $bdd->connection = null;
-        header("Location: index.php");
+        header("Location: ./backend.php");
     }
 } else {
 
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>update</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 
 </head>
 
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
         </div>
     <div class="container">
 
-        <form method="post" action="edit.php?id=<?php echo $id; ?>">
+        <form method="post" action="./edit.php?id=<?php echo $id; ?>">
 
             <div class="control-group <?php echo !empty($titreError) ? 'error' : ''; ?>">
                 <label class="control-label">Name</label>
@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
                 <label class="control-label">Contenu du post:</label>
 
                 <div class="controls">
-                    <input class="textcont" name="contenu" type="textarea" placeholder="" value="<?php echo !empty($contenu_post) ? $contenu_post : ''; ?>"></>
+                    <textarea class="textcont" name="contenu" type="textarea" placeholder="" rows="5" cols="20" minlength="5" value=""><?php echo !empty($contenu_post) ? $contenu_post : ''; ?></textarea></>
                     <?php if (!empty($contenu_postError)) : ?>
                         <span class="help-inline"><?php echo $contenu_postError; ?></span>
                     <?php endif; ?>

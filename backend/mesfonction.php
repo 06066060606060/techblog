@@ -3,7 +3,7 @@ session_start();
 //AFFICHAGE DE POST REDUIT PAGE D'ACCUEIL_____________________________
 function indexpage()
 {
-    include './bdd.php';
+    include './backend/bdd.php';
     //SI CATEGORIE 3 
     if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['cat3'])) {
         $postx = $bdd->query('SELECT * FROM post WHERE active = 1 AND categoryId = 2 ORDER BY date_time DESC limit 4');
@@ -33,17 +33,17 @@ function indexpage()
     for ($i = 0; $i < count($content); $i++) { ?>
         <article>
             <div class="box animate__animated animate__backInDown">
-                <a class="1" href="./post.php?id=<?= $content[$i]['id_post']; ?>">
+                <a class="1" href="./backend/post.php?id=<?= $content[$i]['id_post']; ?>">
                     <h2><?= $content[$i]["titre_post"]; ?></h2>
                     <h5>Posté le <?= date_format($date, 'd/m/Y H:i'); ?> par <?= $content[$i]['authorId']; ?></h5>
                     <img class="imgpost" src="<?= $content[$i]["image_post"]; ?>"></img>
                     <p class="shortened"><?= $content[$i]["contenu_post"]; ?></p>
                     <div class="social">
                         <span class="icon-like"><?= $content[$i]['post_like']; ?>
-                            <a href="./like.php?id=<?= $content[$i]['id_post']; ?>">
+                            <a href="./backend/like.php?id=<?= $content[$i]['id_post']; ?>">
                                 <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                         </span>
-                        <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="post.php?id=<?= $content[$i]['id_post']; ?>" style="color:rgb(37, 106, 255);"><?= "Lire la suite"; ?></a></span>
+                        <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="./backend/post.php?id=<?= $content[$i]['id_post']; ?>" style="color:rgb(37, 106, 255);"><?= "Lire la suite"; ?></a></span>
                         <span class="comm-post">3
                             <i class="fa-solid fa-message"></i>
                         </span>
@@ -62,7 +62,7 @@ function indexpage()
 //RANDOM POST POPULAIRE_______________________________________________
 function postpopfunction()
 {
-    include './bdd.php';
+    include './backend/bdd.php';
     while ($post = $randpost->fetch()) {
 
         $content[] = [
@@ -74,7 +74,7 @@ function postpopfunction()
 
     for ($i = 0; $i < 3; $i++) { ?>
         <div class="poppost">
-            <a href="post.php?id=<?= $content[$i]['id_post']; ?>">
+            <a href="./backend/post.php?id=<?= $content[$i]['id_post']; ?>">
                 <h5 class="psttitre"><?php echo $content[$i]["titre_post"]; ?></h5>
                 <img class="popimg" src="<?php echo $content[$i]['image_post']; ?>"></img>
             </a>
@@ -118,11 +118,11 @@ function FullPostFunction()
 
                 <h2><?= $titre ?></h2>
                 <h5>Posté le <?= date_format($date, 'd/m/Y H:i'); ?> par admin</h5>
-                <img class="imgfullpost" src="<?= $image_post ?>"></img>
+                <img class="imgfullpost" src="../<?= $image_post ?>"></img>
                 <p class="contentFullPost"><?= $contenu ?></p>
                 <div class="social">
                     <span class="icon-like"><?= $post_like ?>
-                        <a href="./like.php?id=<?= $id ?>">
+                        <a href="./backend/like.php?id=<?= $id ?>">
                             <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                     </span>
                     <span class="link-post"> &zwnj; </span>
@@ -238,7 +238,10 @@ function MyBackground()
 }
 
 
-
+function my_var_dump($array, $name = 'var')
+{
+    highlight_string("<?php\n\$$name =\n" . var_export($array, true) . ";\n?>");
+}
 
 
 ?>
