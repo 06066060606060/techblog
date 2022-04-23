@@ -142,6 +142,35 @@ a {
   }
 }
 
+/* bouton si loggé */
+
+.logbck{
+  position:fixed;
+  z-index: 2;
+  margin: 10px;
+  padding: 10px;
+  background-color: #040424;
+  border-radius: 10px;
+}
+
+.logged{
+  padding: 10px;
+  color: white;
+}
+.btnbackend a{
+  text-align: center;
+  color: white;
+  width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.061);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: rgba(30, 30, 30, 0.622);
+
+}
+
 /*GRID DU MENU_________________________________________________________ */
 .menu {
   grid-area: menu;

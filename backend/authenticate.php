@@ -36,15 +36,15 @@ if (password_verify($_POST['password'], $password)) {  // use BCRYPT
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
-		echo 'Welcome ' . $_SESSION['name'] . '!';
+		echo 'Bienvenue ' . $_SESSION['name'] . '!';
 		header('Location: ./backend.php');
 	} else {
 		// Incorrect password
-		echo 'Incorrect username and/or password!';
+		echo 'Password incorrect!';
 	}
 } else {
 	// Incorrect username
-	echo 'Incorrect username and/or password!';
+	echo 'Username  Incorrect';
 }
 
 	$stmt->close();

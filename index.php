@@ -5,12 +5,10 @@ include './backend/mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
 	         
-// if(isset($_POST['cat4'])) {
-//             echo "This is Button1 that is selected";
-//         }
-//         if(isset($_POST['cat3'])) {
-//             echo "This is Button2 that is selected";
-//         }
+if(isset($_SESSION['loggedin'])) {
+            echo "<div class='logbck'><p class='logged'>Vous êtes connecté &zwnj;", $_SESSION['name'];
+            echo "<div class='btnbackend'><a href='./backend/backend.php'>Backend</a><a href='./backend/logout.php'>Déconnecter</a></div></div></p>";
+        }
 ?>
 
 
