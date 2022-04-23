@@ -71,7 +71,7 @@ error_reporting(1);
                         <input type="radio" id="cat" name="categoryId" value="1"><br>
                         <label for="cat2">Gaming</label>
                          <input type="radio" id="cat" name="categoryId" value="2"><br>
-                         <label for="cat3">Photos</label>
+                         <label for="cat3">Software</label>
                          <input type="radio" id="cat" name="categoryId" value="3"><br>
 
                     </p>
