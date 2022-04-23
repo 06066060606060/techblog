@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <?php
 include './backend/bdd.php';
 include './backend/mesfonction.php';
@@ -19,8 +20,8 @@ if(isset($_SESSION['loggedin'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/stylesheet.css">
   <script type="text/javascript" src="./js/anim.js"></script>
-  <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="./css/59ecaaffaa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"  href="./css/animate.min.css"/>
   <title>Margoula Tech Blog</title>
 </head>
 
@@ -76,11 +77,11 @@ if(isset($_SESSION['loggedin'])) {
         <div class="cat1 animate__animated animate__backInDown"><a href="index.php" style="color: white">Accueil</a></div>
         <div class="cat2  animate__animated animate__backInDown"><a href="index.php" style="color: white">News</a></div>
         <div class="cat3  animate__animated animate__backInDown">
-          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form> </div>
+          <form method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form> </div>
         <div class="cat4  animate__animated animate__backInDown">
-          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"><input type="submit" name="cat4" value="Gaming" class="menuInput"></form></div>
+          <form method="post"><input type="submit" name="cat4" value="Gaming" class="menuInput"></form></div>
         <div class="cat5  animate__animated animate__backInDown">
-          <form action="index.php" method="post"><input type="submit" name="cat5" value="Software" class="menuInput"></form></div>
+          <form method="post"><input type="submit" name="cat5" value="Software" class="menuInput"></form></div>
         <div class="cat6 animate__animated animate__backInDown" onclick="on()">login</div>
       </nav>
 
@@ -90,7 +91,6 @@ if(isset($_SESSION['loggedin'])) {
         indexpage();
         ?>
       </main>
-
 
 
 
