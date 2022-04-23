@@ -87,7 +87,7 @@ function postpopfunction()
 
 //___________________________________________________________________________
 
-//_________________________FULL POST__________________________________
+//_________________________PAGE LIRE POST__________________________________
 function FullPostFunction()
 {
     include './bdd.php';
@@ -138,6 +138,7 @@ function FullPostFunction()
     } ?>
     <?php }
 
+//_________________________FONCTION AFFICHER COMMENTAIRES__________________________________
 
 function PostCommFunction()
 {
@@ -178,6 +179,7 @@ function PostCommFunction()
 
 }
 
+//_________________________FONCTION POSTER COMMENTAIRES__________________________________
 
 function commentaires()
 {

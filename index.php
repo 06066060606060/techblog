@@ -4,12 +4,13 @@ include './backend/bdd.php';
 include './backend/mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
-	          if(isset($_POST['cat4'])) {
-            echo "This is Button1 that is selected";
-        }
-        if(isset($_POST['cat3'])) {
-            echo "This is Button2 that is selected";
-        }
+	         
+// if(isset($_POST['cat4'])) {
+//             echo "This is Button1 that is selected";
+//         }
+//         if(isset($_POST['cat3'])) {
+//             echo "This is Button2 that is selected";
+//         }
 ?>
 
 
@@ -29,9 +30,7 @@ date_default_timezone_set('Europe/Paris');
 <body>
 
 <div id="overlay"></div>
-  <div class="background">
-    <!-- <?php MyBackground(); ?> -->
-  </div>
+
 
   <div id="login">
       <i class="fa-solid fa-circle-xmark" onclick="off()"></i>
