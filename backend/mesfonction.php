@@ -122,7 +122,7 @@ function FullPostFunction()
                 <p class="contentFullPost"><?= $contenu ?></p>
                 <div class="social">
                     <span class="icon-like"><?= $post_like ?>
-                        <a href="./backend/like.php?id=<?= $id ?>">
+                        <a href="./like.php?id=<?= $id ?>">
                             <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
                     </span>
                     <span class="link-post"> &zwnj; </span>

@@ -28,8 +28,8 @@ if ($stmt->num_rows > 0) {
 	$stmt->bind_result($id, $password);
 	$stmt->fetch();
 	
-if ($_POST['password'] === $password) {
-//if (password_verify($_POST['password'], $password)) {  // use BCRYPT
+// if ($_POST['password'] === $password) {
+if (password_verify($_POST['password'], $password)) {  // use BCRYPT
 		// Verification success! User has logged-in!
 		// Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
 		session_regenerate_id();

@@ -4,7 +4,12 @@ include './backend/bdd.php';
 include './backend/mesfonction.php';
 setlocale(LC_TIME, 'fr_FR');
 date_default_timezone_set('Europe/Paris');
-
+	          if(isset($_POST['cat4'])) {
+            echo "This is Button1 that is selected";
+        }
+        if(isset($_POST['cat3'])) {
+            echo "This is Button2 that is selected";
+        }
 ?>
 
 
@@ -72,17 +77,14 @@ date_default_timezone_set('Europe/Paris');
       </div>
 
       <nav class="menu">
-        <div class="cat1 animate__animated animate__backInDown" onclick="toggleNav()">Catégories</div>
-        <div id="cat2"><a href="index.php" style="color: white">General</a></div>
-        <div id="cat3">
-          <form action="index.php" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form>
-        </div>
-        <div id="cat4" onclick="">
-          <form action="index.php" method="post"><input type="submit" name="cat4" value="Gaming" class="menuInput"></form>
-        </div>
-        <div id="cat5">
-          <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form>
-        </div>
+        <div class="cat1 animate__animated animate__backInDown"><a href="index.php" style="color: white">Accueil</a></div>
+        <div class="cat2  animate__animated animate__backInDown"><a href="index.php" style="color: white">News</a></div>
+        <div class="cat3  animate__animated animate__backInDown">
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form> </div>
+        <div class="cat4  animate__animated animate__backInDown">
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"><input type="submit" name="cat4" value="Gaming" class="menuInput"></form></div>
+        <div class="cat5  animate__animated animate__backInDown">
+          <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form></div>
         <div class="cat6 animate__animated animate__backInDown" onclick="on()">login</div>
       </nav>
 
