@@ -1,235 +1,242 @@
+
 <html lang="en">
-  <?php
-  include './bdd.php';
-  include './mesfonction.php';
-  setlocale(LC_TIME, 'fr_FR');
-  date_default_timezone_set('Europe/Paris');
   
-  ?>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/stylesheet.css">
-  <script type="text/javascript" src="./js/anim.js"></script>
-  <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <title>Index</title>
-</head>
 
-<body>
 
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <script type="text/javascript" src="./js/anim.js"></script>
+    <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Margoula Tech Blog</title>
+  </head>
+  
+  <body>
+  
   <div id="overlay"></div>
-
-  <div id="login">
-      <i class="fa-solid fa-circle-xmark" onclick="off()"></i>
-    <h1>Login</h1>
-    <form action="backend.html" method="post">
-      <label for="username">
-      <i class="fa-solid fa-user"></i>
-      </label>
-      <input type="text" name="username" placeholder="Username" id="username" >
-      <label for="password">
-      <i class="fa-solid fa-lock"></i>
-      </label>
-      <input type="password" name="password" placeholder="Password" id="password" >
-      <input type="submit" value="Login">
-    </form>
-  </div>
-
-  <div class="back"></div>
-  <div class="central">
-    <div class="containerprincipal">
-      <header class="logo box animate__animated animate__backInDown">
-        <img class="logom" src="./img/marg.png">
-      </header>
-
-      <div class="headerbar animate__animated animate__backInDown">
-        <h1>
-          <span style="--i:1">M</span>
-          <span style="--i:2">a</span>
-          <span style="--i:3">r</span>
-          <span style="--i:4">g</span>
-          <span style="--i:5">o</span>
-          <span style="--i:6">u</span>
-          <span style="--i:7">l</span>
-          <span style="--i:8">a</span>
-          <span style="--i:9">b &zwnj;</span>
-          <span style="--i:10">Tech &zwnj;</span>
-          <span style="--i:11">B</span>
-          <span style="--i:12">l</span>
-          <span style="--i:13">o</span>
-          <span style="--i:14">g</span>
-
-        </h1>
-      </div>
-
-      <nav class="menu">
-        <div class="cat1 animate__animated animate__backInDown" >Accueil</div>
-        <div class="cat2 animate__animated animate__backInDown" >News</div>
-        <div class="cat3 animate__animated animate__backInDown">Hardware</div>
-        <div class="cat4 animate__animated animate__backInDown">Gaming</div>
-        <div class="cat5 animate__animated animate__backInDown">Photos</div>
-        <div class="cat6  animate__animated animate__backInDown" onclick="on()">login</div>
-      </nav>
-
-      <main class="main">
-        <article>
-          <div class="box animate__animated animate__backInLeft"> 
-       
-            <a class="1" href="./post.html">
-            <h2>Xbox Game Pass April 2022</h2>
-            <h5>Posté le 14/04/2022 17:24 par </h5>
-            <img class="imgpost" src="./miniatures/1.jpg"></img>
-
-            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
-              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
-            <div class="social">
-              <p>
-                <span class="icon-like">8<a href="./like.php?id=14">
-                    <i class="fa-solid fa-heart animate__animated" onclick="this.style.color='red';"></i> </a>
-                </span>
-                <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
-                    suite</a></span>
-                <span class="comm-post">9
-                  <i class="fa-solid fa-message"> </i>
-                </span>
-              </p>
-            </div>
-          </a>
-          </div>
-       
-        </article>
-
-        <article>
-          <div class="box animate__animated animate__backInRight">
-            <a class="1" href="./post.html">
-            <h2>Xbox Game Pass April 2022</h2>
-            <h5>Posté le 14/04/2022 17:24 par </h5>
-            <img class="imgpost" src="./miniatures/2.jpg"></img>
-
-            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
-              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
-            <div class="social">
-              <p>
-                <span class="icon-like">8<a href="./like.php?id=14">
-                    <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
-                </span>
-                <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
-                    suite</a></span>
-                <span class="comm-post">7
-                  <i class="fa-solid fa-message"> </i>
-                </span>
-              </p>
-            </div>
-            </a>
-          </div>
-        </article>
-        <article>
-          <div class="box animate__animated animate__backInLeft">
-            <a class="1" href="./post.html">
-            <h2>Xbox Game Pass April 2022</h2>
-            <h5>Posté le 14/04/2022 17:24 par </h5>
-            <img class="imgpost" src="./miniatures/3.jpg"></img>
-
-            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
-              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
-            <div class="social">
-              <p>
-                <span class="icon-like">8<a href="./like.php?id=14">
-                    <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
-                </span>
-                <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
-                    suite</a></span>
-                <span class="comm-post">9
-                  <i class="fa-solid fa-message"> </i>
-                </span>
-              </p>
-            </div>
-            </a>
-          </div>
-        </article>
-        <article>
-          <div class="box animate__animated animate__backInRight">
-            <a class="1" href="./post.html">
-            <h2>Xbox Game Pass April 2022</h2>
-            <h5>Posté le 14/04/2022 17:24 par </h5>
-            <img class="imgpost" src="./miniatures/4.jpg"></img>
-
-            <p class="shortened">One of Microsoft's greatest contributions to gaming is its online subscription service,
-              Xbox Game Pass. For just $10 a month, you can play 200 video games on Microsoft platforms like.</p>
-            <div class="social">
-              <p>
-                <span class="icon-like">8<a href="./like.php?id=14">
-                    <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
-                </span>
-                <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="post.html" style="color:rgb(37, 106, 255);">Lire la
-                    suite</a></span>
-                <span class="comm-post">2
-                  <i class="fa-solid fa-message"> </i>
-                </span>
-              </p>
-            </div>
-            </a>
-          </div>
-        </article>
-      </main>
-
-      <aside class="sidebar box animate__animated animate__backInUp">
-
-        <!-- a propos -->
-        <h3>A propos</h3>
-        <img class="abimg" src="./img/avatar.png"></img>
-        <p class="abtext">Demo blog formation Simplon 2022</p>
-
-        <!-- post populaires -->
-        <h3>Post Populaires</h3>
-<div class="postp">
-        <div class="poppost">
-          <a href="http://">
-            <h5 class="psttitre">Titre post</h5>
-            <img class="popimg" src="./miniatures/1.jpg"></img>
-          </a>
-        </div>
-
-        <div class="poppost">
-          <a href="http://">
-            <h5 class="psttitre">Titre post</h5>
-            <img class="popimg" src="./miniatures/2.jpg"></img>
-          </a>
-        </div>
-
-        <div class="poppost">
-          <a href="http://">
-            <h5 class="psttitre">Titre post</h5>
-            <img class="popimg" src="./miniatures/3.jpg"></img>
-          </a>
-        </div>
-</div>
-
-        <!-- Social -->
-        <div class="social">
-   
-          <h3>Contact</h3>
-          <a href="https://github.com/06066060606060/"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
-          <a href="https://twitter.com/@xmicky/"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
-        </div>
-
-      </aside>
-
-      <btn class="next">
-        <div class="newer animate__animated animate__backInLeft"><i class="fa-solid fa-arrow-left-long"></i></div>
-        <div class="older animate__animated animate__backInRight"><i class="fa-solid fa-arrow-right-long"></i></div>
-      </btn>
-
-
-      <footer class="footer box animate__animated animate__backInUp">
-        <a href="" style="color: white">Copyright</a>
-      </footer>
-
-      <div class="spacer">&zwnj; </div>
+  
+  
+    <div id="login">
+        <i class="fa-solid fa-circle-xmark" onclick="off()"></i>
+      <h1>Login</h1>
+      <form action="./backend.html" method="post">
+        <label for="username">
+          <i class="fa-solid fa-user"></i>
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+        <label for="password">
+          <i class="fa-solid fa-lock"></i>
+        </label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <input type="submit" value="Login">
+      </form>
     </div>
-  </div>
-</body>
-
-</html>
+  
+    <div class="back" id="back"></div>
+    <div class="central">
+      <div class="containerprincipal">
+        <header class="logo box animate__animated animate__backInDown">
+          <a href="./index.html"> <img class="logom" src="./img/marg.png"></a>
+        </header>
+  
+        <div class="headerbar animate__animated animate__backInDown">
+          <h1>
+            <span style="--i:1">M</span>
+            <span style="--i:2">a</span>
+            <span style="--i:3">r</span>
+            <span style="--i:4">g</span>
+            <span style="--i:5">o</span>
+            <span style="--i:6">u</span>
+            <span style="--i:7">l</span>
+            <span style="--i:8">a</span>
+            <span style="--i:9">b &zwnj;</span>
+            <span style="--i:10">Tech &zwnj;</span>
+            <span style="--i:11">B</span>
+            <span style="--i:12">l</span>
+            <span style="--i:13">o</span>
+            <span style="--i:14">g</span>
+  
+          </h1>
+        </div>
+  
+        <nav class="menu">
+          <div class="cat1 animate__animated animate__backInDown"><a href="index.php" style="color: white">Accueil</a></div>
+          <div class="cat2  animate__animated animate__backInDown"><a href="index.php" style="color: white">News</a></div>
+          <div class="cat3  animate__animated animate__backInDown">
+            <form action="/Blog/index.php" method="post"><input type="submit" name="cat3" value="hardware" class="menuInput"></form> </div>
+          <div class="cat4  animate__animated animate__backInDown">
+            <form action="/Blog/index.php" method="post"><input type="submit" name="cat4" value="Gaming" class="menuInput"></form></div>
+          <div class="cat5  animate__animated animate__backInDown">
+            <form action="index.php" method="post"><input type="submit" name="cat5" value="Software" class="menuInput"></form></div>
+          <div class="cat6 animate__animated animate__backInDown" onclick="on()">login</div>
+        </nav>
+  
+        <main class="main">
+  
+                    <article>
+              <div class="box animate__animated animate__backInDown">
+                  <a class="1" href="./post.html">
+                      <h2>HP Spectre x360 16</h2>
+                      <h5>Posté le 23/04/2022 12:56 par 1</h5>
+                      <img class="imgpost" src="./miniatures/12.jpg"></img>
+                      <p class="shortened">The Spectre x360 16 is now available from HP.com, Best Buy, and Amazon. HP lets you configure the laptop in specific ways, including integrated Intel graphics, Core i7 processor, 16GB of RAM, 512GB of storage, and a 3K WLED display, which brings the starting price closer to $1,500 ($1,250 on sale).
+  
+  Best Buy and Amazon both have specific SKUs priced slightly higher due to some more expensive hardware. For example, the Best Buy model uses 32GB of Intel Optane to improve storage performance.
+  
+  We used the top-tier model for this review with an NVIDIA GeForce RTX 3050 GPU, 1TB SSD (+32GB Intel Optane), 16GB of RAM, and the upgraded 3840 x 2400 OLED display, which retails for $2,120. Users can spec up to 32GB of RAM and a 2TB SSD for $2,860.
+  
+  </p>
+                      <div class="social">
+                          <span class="icon-like">1                            <a href="">
+                                  <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                          </span>
+                          <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="./post.html" style="color:rgb(37, 106, 255);">Lire la suite</a></span>
+                          <span class="comm-post">3
+                              <i class="fa-solid fa-message"></i>
+                          </span>
+                          </p>
+                      </div>
+                  </a>
+              </div>
+          </article>
+              <article>
+              <div class="box animate__animated animate__backInDown">
+                  <a class="1" href="./post.html">
+                      <h2>Halo Infinite 2022 </h2>
+                      <h5>Posté le 23/04/2022 12:56 par 2</h5>
+                      <img class="imgpost" src="./miniatures/13.jpg"></img>
+                      <p class="shortened">new roadmap provides insight into what's coming for Halo Infinite through the rest of 2022.
+  
+  Developer 343 Industries shared a roadmap for Halo Infinite on Friday, detailing the current targets for various modes and updates, including the long-awaited campaign co-op.
+  
+  Network (or online) campaign co-op is currently slated for a late August 2022 launch, alongside an update bringing the ability to replay missions. Forge mode is scheduled to enter beta testing in September 2022, as 343 Industries expresses a desire to get the mode "into your hands sooner rather than later."
+  As part of this roadmap, the length of Halo Infinite Season 2 has also been extended. Season 3 is now slated to begin on Nov. 8, 2022. According to 343 Industries head of creative Joseph Staten, the "primary reason" for extending the length of the season is to allow for more quality-of-life updates, while maintaining the health of the development team.
+  
+  Staten also shared that Season 2 is introducing "multiplayer narrative events" that feature a player's Spartan in an ongoing storyline, though it's currently unclear exactly how these events will unfold. Halo Infinite Season 3 is set to include splitscreen co-op, as well as a new Battle Pass, more maps, and more modes.</p>
+                      <div class="social">
+                          <span class="icon-like">0                            <a href="">
+                                  <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                          </span>
+                          <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="./post.html" style="color:rgb(37, 106, 255);">Lire la suite</a></span>
+                          <span class="comm-post">3
+                              <i class="fa-solid fa-message"></i>
+                          </span>
+                          </p>
+                      </div>
+                  </a>
+              </div>
+          </article>
+              <article>
+              <div class="box animate__animated animate__backInDown">
+                  <a class="1" href="./post.html">
+                      <h2>Microsoft tech holoports</h2>
+                      <h5>Posté le 23/04/2022 12:56 par 2</h5>
+                      <img class="imgpost" src="./miniatures/14.jpg"></img>
+                      <p class="shortened">Usually, it's hard to have company when living aboard the International Space Station (ISS). But thanks to technology from Microsoft, astronauts can have visitors any time they'd like, at least virtual ones. Microsoft's technology was used to "holoport" humans to the ISS in October 2021 (via Space.com). A HoloLens Kinect camera was used to record a group in 3-D and then project their likenesses through a HoloLens headset worn by astronauts on the space station.
+  
+  NASA flight surgeon Dr. Josef Schmid, industry partner AEXA Aerospace CEO Fernando De La Pena Llaca, and their respective teams were the first people to ever be holoported from Earth into space.
+  
+  To make the process work, the Hololens camera and headset were used in conjunction with custom software from Aexa. ESA (European Space Agency) astronaut Thomas Pesquet was able to hold a conversation with Schmid and De La Pena while the latter two appeared virtually as holograms.</p>
+                      <div class="social">
+                          <span class="icon-like">0                            <a href="">
+                                  <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                          </span>
+                          <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="./post.html" style="color:rgb(37, 106, 255);">Lire la suite</a></span>
+                          <span class="comm-post">3
+                              <i class="fa-solid fa-message"></i>
+                          </span>
+                          </p>
+                      </div>
+                  </a>
+              </div>
+          </article>
+              <article>
+              <div class="box animate__animated animate__backInDown">
+                  <a class="1" href="./post.html">
+                      <h2>Microsoft Teams app</h2>
+                      <h5>Posté le 23/04/2022 12:56 par 1</h5>
+                      <img class="imgpost" src="./miniatures/15.jpg"></img>
+                      <p class="shortened">The day is almost here when the Microsoft Store will have Microsoft Teams stocked on its digital shelves. As spotted on the Microsoft 365 roadmap, it could be just a matter of weeks before Teams officially hits the storefront.
+  
+  According to the roadmap, where all good Microsoft product and service updates are found, general availability for the introduction of Teams to the MS Store is slated for May 2022. Do note that roadmap dates are estimates, not guarantees, so until you see the app firsthand on the storefront, nothing is set in stone.
+  
+  Here's the description Microsoft has for the change: "Microsoft Teams app for work, school and life will soon be available to download from Microsoft store. This app will support work, school and consumer accounts on Windows 10 and Work or school accounts on Windows 11."
+  
+  Windows 10 gets support for all three facets of Teams via this app, and Windows 11 gets support for two since Teams personal integration is already a core part of the newer OS' experience.
+  
+  With Teams, the Microsoft Store will grow that much stronger. It's already assimilated other storefronts and major browsers, so the logical conclusion was for Microsoft to bring its own communications platform under the umbrella as well.</p>
+                      <div class="social">
+                          <span class="icon-like">0                            <a href="">
+                                  <i class="fa-solid fa-heart" onclick="this.style.color='red';"></i> </a>
+                          </span>
+                          <span class="link-post animate__animated animate__flash animate__delay-2s animate__slower animate__infinite"><a href="./post.html" style="color:rgb(37, 106, 255);">Lire la suite</a></span>
+                          <span class="comm-post">3
+                              <i class="fa-solid fa-message"></i>
+                          </span>
+                          </p>
+                      </div>
+                  </a>
+              </div>
+          </article>
+                </main>
+  
+  
+  
+  
+        <aside class="sidebar box animate__animated animate__backInUp">
+          <!-- a propos -->
+          <h3>A propos</h3>
+          <img class="abimg" src="./img/avatar.png"></img>
+          <p class="abtext">Demo blog formation Simplon 2022</p>
+          <!-- post populaires -->
+          <h3>Post Populaires</h3>
+          <div class="postp">
+                      <div class="poppost">
+              <a href="./post.html">
+                  <h5 class="psttitre">Microsoft Teams app</h5>
+                  <img class="popimg" src="./miniatures/15.jpg"></img>
+              </a>
+          </div>
+  
+              <div class="poppost">
+              <a href="./post.html">
+                  <h5 class="psttitre">Microsoft Autofill Password</h5>
+                  <img class="popimg" src="./miniatures/8.jpg"></img>
+              </a>
+          </div>
+  
+              <div class="poppost">
+              <a href="./post.html">
+                  <h5 class="psttitre">HP Spectre x360 16</h5>
+                  <img class="popimg" src="./miniatures/12.jpg"></img>
+              </a>
+          </div>
+  
+                  </div>
+          <!-- Social -->
+          <div class="social">
+            <h3>Contact</h3>
+            <a href="https://github.com/06066060606060/"><i class="fa-brands fa-github-square fa-2x" id="github"></i></a></h< />
+            <a href="https://twitter.com/@xmicky/"><i class="fa-brands fa-twitter-square fa-2x" id="twitter"></i></a>
+          </div>
+        </aside>
+  
+        <btn class="next">
+          <div class="newer animate__animated animate__backInLeft"><i class="fa-solid fa-arrow-left-long"></i></div>
+          <div class="older animate__animated animate__backInRight"><i class="fa-solid fa-arrow-right-long"></i></div>
+        </btn>
+  
+        <footer class="footer box animate__animated animate__backInUp">
+          <a href="" style="color: white">Copyright</a>
+        </footer>
+  
+        <div class="spacer">&zwnj; </div>
+      </div>
+    </div>
+  </body>
+  
+  </html>

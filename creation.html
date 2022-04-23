@@ -1,0 +1,48 @@
+
+  <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Crud-Update</title>
+        <link rel="stylesheet" href=".././css/stylesheet.css" />
+    </head>
+    
+    <body>
+        <div class="back"></div>
+        <div class="central">
+            <div class="headerbar1"></div>
+    
+            <nav class="menu">
+                <div class="cat1">
+                    <a href="./backend.php" style="color: white">Retour </a>
+                </div>
+            </nav>
+            <div class="container">
+                <main class="mainPost">
+                    <article>
+                        <div class="box">
+                            
+                  <form class="myform" action="./creation.php" method="POST" enctype="multipart/form-data">
+                    <div class="controls">
+                      <h4> Catégories: </h4>
+                          <label for="cat1">Hardware</label>
+                          <input type="radio" id="cat" name="categoryId" value="1"><br>
+                          <label for="cat2">Gaming</label>
+                           <input type="radio" id="cat" name="categoryId" value="2"><br>
+                           <label for="cat3">Photos</label>
+                           <input type="radio" id="cat" name="categoryId" value="3"><br>
+                      <input type="texte" name="titre" class="areatitre" placeholder="titre" minlength="6"><br>
+                          <textarea name="contenu" id="textarea1" rows="15" cols="80" minlength="5" placeholder="contenu du post..."></textarea><br>
+                      <input type="file" name="miniature"><br>
+                      <input type="submit" value="Poster" class="btncomment"><br>
+                      </div>
+                  </form>
+              </div>
+            </article>
+        </main>
+    </div>
+</div>
+</body>
+
+</html>

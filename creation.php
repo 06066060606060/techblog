@@ -8,10 +8,10 @@ error_reporting(1);
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Créer un post</title>
-    <link rel="stylesheet" href="/style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Nouveau Post</title>
+    <link rel="stylesheet" href="./css/stylesheet.css" />
 </head>
 
 <body>
@@ -51,11 +51,19 @@ error_reporting(1);
         } else {
 
         ?>
-  <div>
-        <h3 class="titre">Nouveau Post</h3>
-    </div>
-    <div class="container">
-            <div id="forms1">
+        <div class="back"></div>
+        <div class="central">
+            <div class="headerbar1"></div>
+    
+            <nav class="menu">
+                <div class="cat1">
+                    <a href="./backend/backend.php" style="color: white">Retour </a>
+                </div>
+            </nav>
+            <div class="container">
+                <main class="mainPost">
+                    <article>
+                        <div class="box">
                 <form class="myform" action="./creation.php" method="POST" enctype="multipart/form-data">
                     <h4> Catégories: </h4>
                     <p>
@@ -70,7 +78,7 @@ error_reporting(1);
                     <input type="texte" name="titre" class="areatitre" placeholder="titre" minlength="6">
 
                     <p>
-                        <textarea name="contenu" id="textarea1" rows="5" cols="20" minlength="5" placeholder="commentaire..."></textarea>
+                        <textarea name="contenu" id="textarea1" rows="15" cols="80" minlength="5" placeholder="commentaire..."></textarea>
                     </p>
                     <p><input type="file" name="miniature"></p>
                     <p><input type="submit" value="Poster" class="btncomment"></p>
@@ -86,14 +94,10 @@ error_reporting(1);
         }
 
         ?>
-        <p>
-
-
-
+  </article>
+        </main>
     </div>
-    <p>
-
-
+</div>
 </body>
 
 </html>

@@ -57,86 +57,77 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
 
 ?>
 
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>update</title>
-    <link rel="stylesheet" href="../css/stylesheet.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Crud-Update</title>
+    <link rel="stylesheet" href=".././css/stylesheet.css" />
 </head>
 
 <body>
+    <div class="back"></div>
+    <div class="central">
+        <div class="headerbar1"></div>
+
+        <nav class="menu">
+            <div class="cat1">
+                <a href="./backend.php" style="color: white">Retour </a>
+            </div>
+        </nav>
+        <div class="container">
+            <main class="mainPost">
+                <article>
+                    <div class="box animate__animated animate__backInLeft">
+                        <form method="post" action="./edit.php?id=<?php echo $id; ?>">
+
+                            <div class="control">
+                                <label class="control-label">Titre</label>
+                                <div class="controls">
+                                    <input name="titre" type="text" placeholder="" value="<?php echo !empty($titre) ? $titre : ''; ?>">
+                                    <?php if (!empty($titreError)) : ?>
+                                        <span class="help-inline"><?php echo $titreError; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+
+                            <div class="control">
+                                <label class="control-label">Contenu du post:</label>
+                                <div class="controls">
+                                    <textarea class="textcont" name="contenu" type="textarea" placeholder="" rows="15" cols="80" minlength="5" value=""><?php echo !empty($contenu_post) ? $contenu_post : ''; ?></textarea></>
+                                    <?php if (!empty($contenu_postError)) : ?>
+                                        <span class="help-inline"><?php echo $contenu_postError; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+
+                            <div class="control">
+                                <label class="control-label">Lien image post:</label>
+                                <div class="control">
+                                    <input name="image_post" type="text" placeholder="" value="<?php echo !empty($image_post) ? $image_post : ''; ?>">
+                                    <?php if (!empty($image_postError)) : ?>
+                                        <span class="help-inline"><?php echo $image_postError; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+
+                            <div class="control">
+                                <div class="control">
+                                    <img class="control-img" src="../<?php echo !empty($image_post) ? $image_post : ''; ?>" <input name="image_post" type="text" placeholder="" value="" />
+                                </div>
+                            </div>
 
 
-<div>
-            <h3 class="titre" >Modifier un Post</h3>
+                            <div class="form-actions">
+                                <input type="submit" class="btn btn-modif" name="submit" value="submit">
+                            </div>
+                        </form>
+                    </div>
+                </article>
+            </main>
         </div>
-    <div class="container">
-
-        <form method="post" action="./edit.php?id=<?php echo $id; ?>">
-
-            <div class="control-group <?php echo !empty($titreError) ? 'error' : ''; ?>">
-                <label class="control-label">Name</label>
-
-                <div class="controls">
-                    <input name="titre" type="text" placeholder="" value="<?php echo !empty($titre) ? $titre : ''; ?>">
-                    <?php if (!empty($titreError)) : ?>
-                        <span class="help-inline"><?php echo $titreError; ?></span>
-                    <?php endif; ?>
-                </div>
-                <p>
-
-            </div>
-            <p>
-
-
-            <div class="control-group <?php echo !empty($contenu_postError) ? 'error' : ''; ?>">
-                <label class="control-label">Contenu du post:</label>
-
-                <div class="controls">
-                    <textarea class="textcont" name="contenu" type="textarea" placeholder="" rows="5" cols="20" minlength="5" value=""><?php echo !empty($contenu_post) ? $contenu_post : ''; ?></textarea></>
-                    <?php if (!empty($contenu_postError)) : ?>
-                        <span class="help-inline"><?php echo $contenu_postError; ?></span>
-                    <?php endif; ?>
-                </div>
-                <p>
-
-            </div>
-            <p>
-
-
-            <div class="control-group <?php echo !empty($image_postError) ? 'error' : ''; ?>">
-                <label class="control-label">Lien image post:</label>
-
-
-                <div class="controls">
-                    <input name="image_post" type="text" placeholder="" value="<?php echo !empty($image_post) ? $image_post : ''; ?>">
-                    <?php if (!empty($image_postError)) : ?>
-                        <span class="help-inline"><?php echo $image_postError; ?></span>
-                    <?php endif; ?>
-                </div>
-                <p>
-
-            </div>
-            <p>
-
-
-            <div class="form-actions">
-                <input type="submit" class="btn btn-success" name="submit" value="submit">
-            </div>
-            <p>
-
-        </form>
-        <p>
-
-
-
     </div>
-    <p>
-
-
 </body>
 
 </html>

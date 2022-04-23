@@ -729,7 +729,7 @@ footer {
 }
 
 
-/* LOGIN FORM */
+/* LOGIN FORM__________________________________________________________________ */
 
 #login {
   visibility: hidden;
@@ -821,16 +821,47 @@ animation: fronte1 1s linear forwards;
   transition: background-color 0.2s;
 }
 
+/* CONTROL FORM EDITER CREER POST */
 .control{
   text-align: center;
+  padding:5px;
+  
+}
+.titrepost{
+  border-style: none; 
+  border-color: Transparent; 
+  overflow: auto; 
+  outline: none;
+}
 
+.textcont{
+  border-style: none; 
+  border-color: Transparent; 
+  overflow: auto; 
+  resize:none;
+  outline: none;
 }
 
 .control-label{
   color: white;
+
+ 
+}
+
+.controls{
+
 }
 
 .control-img{
   width: 300px;
   height: auto;
+}
+
+.btn.btn-modif{
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.061);
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(30, 30, 30, 0.622);
 }

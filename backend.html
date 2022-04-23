@@ -1,113 +1,120 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Liste des Posts</title>
-    <link rel="stylesheet" href="./css/stylesheet.css" />
-    <link rel="stylesheet" href="./css/backend.css" />
-  </head>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/backend.css">
 
-  <body>
-    <div class="back"></div>
+</head>
+
+<body>
+<div class="back"></div>
     <div class="container">
-      <div class="navbarb">
-        <div id="btnaccueil">
-          <a href="index.html" style="color: white">Page d'accueil</a>
+        <div class="navbarb">
+        <div id="btnaccueil"><a href="./index.html" style="color: white">Page d'accueil</a></div>
+        <div id="btnnewpost"><a href="./creation.html" style="color: white">Creer Nouveau Post</a></div>
+        <div id="btnnewpost"><a href="" style="color: white">Se Déconnecter</a></div>
+        <p style="font-size: 18px; padding:10px; color:white">Salut, admin</p> 
+        <p style="color:white; padding-left:10px">Liste de tes Posts:</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="table-responsive">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <th>titre</th>
-              <p>
-                <th>Date</th>
-              </p>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <th>titre</th>
+                        <p>
+                            <th>Date</th>
+                        <p>                     
+                            <th>image du post</th>
+                        <p>
+                            <th>contenu du post</th>
+                       
+                        <p>
+                        <th>Catégorie</th>
+                        <p>
+                            <th>Aperçu</th>
+                        <p>
+                        <th>Edition</th>
+                        <p>
+                        <th>Activer</th>
+                        <p>
+                            <th>Désactiver</th>
+                        <p>
+                            <th>Actif</th>
+                        <p>
+                            <th>Supprimer</th>
+                        <p>
 
-              <p>
-                <th>image du post</th>
-              </p>
+                    </thead>
 
-              <p>
-                <th>contenu du post</th>
-              </p>
+                    <tbody>
+                          <tr><td>Microsoft Teams app</td><p><td>2022-04-23 12:56:12</td><p><td><img src=".././miniatures/15.jpg"></td><p><td><p class="short">The day is almost here when the Microsoft Store will have Microsoft Teams stocked on its digital shelves. As spotted on the Microsoft 365 roadmap, it could be just a matter of weeks before Teams officially hits the storefront.
 
-              <p>
-                <th>Catégorie</th>
-              </p>
+According to the roadmap, where all good Microsoft product and service updates are found, general availability for the introduction of Teams to the MS Store is slated for May 2022. Do note that roadmap dates are estimates, not guarantees, so until you see the app firsthand on the storefront, nothing is set in stone.
 
-              <p>
-                <th>Lecture</th>
-              </p>
+Here's the description Microsoft has for the change: "Microsoft Teams app for work, school and life will soon be available to download from Microsoft store. This app will support work, school and consumer accounts on Windows 10 and Work or school accounts on Windows 11."
 
-              <p>
-                <th>Edition</th>
-              </p>
+Windows 10 gets support for all three facets of Teams via this app, and Windows 11 gets support for two since Teams personal integration is already a core part of the newer OS' experience.
 
-              <p>
-                <th>Activer</th>
-              </p>
+With Teams, the Microsoft Store will grow that much stronger. It's already assimilated other storefronts and major browsers, so the logical conclusion was for Microsoft to bring its own communications platform under the umbrella as well.</p></td><p><td>2</td><p><td><a class="btn" href="./post.php?id=82">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html">Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=82 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=82 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=82 ">Supprimer</a></td><p></tr><p><tr><td>HP Spectre x360 16</td><p><td>2022-04-23 12:56:12</td><p><td><img src=".././miniatures/12.jpg"></td><p><td><p class="short">The Spectre x360 16 is now available from HP.com, Best Buy, and Amazon. HP lets you configure the laptop in specific ways, including integrated Intel graphics, Core i7 processor, 16GB of RAM, 512GB of storage, and a 3K WLED display, which brings the starting price closer to $1,500 ($1,250 on sale).
 
-              <p>
-                <th>Désactiver</th>
-              </p>
+Best Buy and Amazon both have specific SKUs priced slightly higher due to some more expensive hardware. For example, the Best Buy model uses 32GB of Intel Optane to improve storage performance.
 
-              <p>
-                <th>Actif</th>
-              </p>
+We used the top-tier model for this review with an NVIDIA GeForce RTX 3050 GPU, 1TB SSD (+32GB Intel Optane), 16GB of RAM, and the upgraded 3840 x 2400 OLED display, which retails for $2,120. Users can spec up to 32GB of RAM and a 2TB SSD for $2,860.
 
-              <p></p>
-            </thead>
+</p></td><p><td>2</td><p><td><a class="btn" href="./post.html">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html">Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=79 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=79 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=79 ">Supprimer</a></td><p></tr><p><tr><td>TSMC founder TSMC founder</td><p><td>2022-04-14 17:24:11</td><p><td><img src=".././miniatures/2.jpg"></td><p><td><p class="short">TSMC's founder and former CEO Morris Chang believes that semiconductor production in the United States will struggle to compete with manufacturing in Taiwan. Chang called recent efforts to increase semiconductor manufacturing in the U.S. a "very expensive exercise in futility." He argued that making chips in the U.S. will cost more, causing the U.S. industry to fail to compete with TSMC and other companies around the world.
 
-            <tbody>
-              <tr>
-                <td>test article 17</td>
-                <p><td>2022-04-15 00:19:35</td></p>
-                <p>
-                  <td>
-                    <img src="miniatures/WIN_20211205_21_24_09_Pro.jpg" />
-                  </td>
-                </p>
-                <p>
-                  <td>
-                    <p class="short">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the
-                      industry&#039;s standard dummy text ever since the 1500s,
-                      when an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book. It has survived
-                      not only five centuries, but also the leap into electronic
-                      typesetting, remaining essentially unchanged. It was
-                    </p>
-                  </td>
-                </p>
-                <p><td>1</td></p>
-                <p>
-                  <td><a class="btn" href="post.php?id=13">Lire</a></td>
-                </p>
-                <p>
-                  <td>
-                    <a class="btn btn-success" href="edit.php?id=13">Editer</a>
-                  </td>
-                </p>
-                <p>
-                  <td><a class="btn btn-active" href="activer.php?id=13 ">Activer</a></td>
-                </p>
-                <p>
-                  <td>
-                    <a class="btn btn-danger" href="desactiver.php?id=13 "
-                      >Désactiver</a
-                    >
-                  </td>
-                </p>
-                <p><td>1</td></p>
-                <p></p>
-              </tr>
-              <p></p>
-            </tbody>
-          </table>
+Chang shared his thoughts at the Brookings Institution think tank (PDF) (via The Register).
+
+The TSMC founder pointed to high manufacturing costs as the main reason U.S.-based semiconductor manufacturing will fail to compete. He highlighted the struggles of TSMC's factory in Oregon. "The same product, the Oregon cost, is about 50 percent more than the Taiwan cost," explained Chang.
+
+It's worth noting that TSMC has plans for a massive chipmaking factory in Arizona. Chang notes that the decision to make that plant was made by the current chairman of TSMC, since Chang was almost retired at the time.
+
+TSMC isn't the only organization to invest heavily in U.S.-based manufacturing. Intel announced plans for what it claims will be the "largest silicon manufacturing location on the planet" in January 2022. The company is also constructing chip factories in Arizona and investing heavily in domestic manufacturing of semiconductors.
+
+The U.S government is considering a bill that will incentive semiconductor production within the United States that will provide over $50 billion in funding. These plans are part of an ongoing effort to have the U.S. compete with China in the semiconductor industry. The United States also has to compete with tech giants in Taiwan, such as TSMC.</p></td><p><td>1</td><p><td><a class="btn" href="./post.php?id=78">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html">Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=78 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=78 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=78 ">Supprimer</a></td><p></tr><p><tr><td>Best desktop PCs for VR 2022</td><p><td>2022-04-23 12:48:53</td><p><td><img src=".././miniatures/10.jpg"></td><p><td><p class="short">The best desktop PCs for VR need to have relatively powerful hardware, allowing you to fully enjoy your VR experience. If you don't want to go through the hassle of building an entirely new PC to get there, we've rounded up some tremendous pre-built desktop PCs, like the HP Omen 30L with 10th and 11th Gen Intel Core or AMD Ryzen 5000 processors (CPU) and NVIDIA RTX 30-series graphics cards (GPU). It's built from the ground up with performance and unique design in mind, making it your best bet for an ultimate VR desktop PC.
+You'll often pay more for the luxury of having your PC built for you, but in the case of HP's Omen 30L, it's no doubt a close call. It's available with 10th and 11th Gen Intel Core CPUs up to an i9 or AMD's Ryzen 5000 CPUs for superb performance. Liquid cooling is available in a bunch of models if you configure it on the official HP website.
+
+You can also get up to 64GB of HyperX DDR4-3200MHz RAM, a 2TB M.2 PCIe NVMe SSD coupled with 6TB of HDD space, and an NVIDIA RTX 3090 GPU with 24GB of GDDR6X VRAM. If you can't get your hands on the best graphics cards alone, a pre-built might be the way to go. In his HP Omen 30L review, Executive Editor Daniel Rubino said that "the Omen 30L is an excellent pick for mainstream audiences who want 4K gaming and no fuss."
+
+Everything is contained in a snazzy 30L tower with a white rhombus logo (gone is the red tribal mask) and a streamlined design with a brushed aluminum finish. It's quite fetching, and it's not nearly as over the top as the Alienware option we love, which is preferable for a lot of people. Add Wi-Fi 6 for a few dollars more, and take advantage of many ports for easy connectivity.</p></td><p><td>2</td><p><td><a class="btn" href="./post.php?id=77">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html">Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=77 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=77 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=77 ">Supprimer</a></td><p></tr><p><tr><td>Dell XPS 15 9520 displays</td><p><td>2022-04-14 19:56:13</td><p><td><img src="../miniatures/5.jpg"></td><p><td><p class="short">The cutting-edge 9520 version of the Dell XPS 15 has either FHD+, 3.5K OLED, or UHD+ display options from which to choose. The "+" comes from the added pixels due to the 16:10 aspect ratio that expands the display for a taller look. While the three displays are the exact same size, they differ significantly.
+
+The FHD+ model will help land you the lowest possible price on an XPS 15, and it's still a respectable IGZO display with 100% sRGB color reproduction and up to 500 nits brightness. It can handle HDR content thanks to Dolby Vision. Battery draw is considerably less than the UHD+ model, which is important if you like leaving the AC adapter behind when you leave your home or office.
+
+The FHD+ option is non-touch and has an anti-glare layer rather than anti-reflective; however, the 500 nits brightness should help solve intense light falling directly on the display.
+
+</p></td><p><td>2</td><p><td><a class="btn" href="./post.html">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html">Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=11 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=11 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=11 ">Supprimer</a></td><p></tr><p><tr><td>Halo Infinite co-op: How to pl</td><p><td>2022-04-14 17:52:34</td><p><td><img src=".././miniatures/4.jpg"></td><p><td><p class="short">Right now, we don't know how many players will be able to enjoy Halo Infinite co-op together. Halo games have varied in the past, though every game except Halo 5: Guardians supported some kind of split-screen play, as the feature aided the games in being see as some of the best Xbox games available.
+
+Halo: Combat Evolved, Halo 2, Halo 3: ODST, and Halo 4 support 2-player co-op, including split-screen. Halo 3 and Halo: Reach support 4-player co-op, though only up to two players can play in split-screen, with the others joining through system link or online. Halo 5: Guardians supports 4-player co-op, but no split-screen at all.
+
+Split-screen play in Halo Infinite actually varies depending on your chosen platform, as the processing power provided by the newer consoles means more players, but not in every mode. On the last-generation Xbox One and Xbox One X, Halo Infinite supports two-player co-op in Arena and Big Team Battle. On Xbox Series X and Xbox Series S, up to four players can play split-screen in Arena, while Big Team Battle is still capped at two players.
+
+Split-screen play is not currently supported on PC, but the feature is coming in a post-launch update according to 343 Industries. Halo Infinite will support co-op play between Xbox consoles and PC, as Halo Infinite supports full cross-play and cross-progression, like many other modern Xbox Game Studios titles.
+
+</p></td><p><td>3</td><p><td><a class="btn" href="./post.html">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html">Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=10 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=10 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=10 ">Supprimer</a></td><p></tr><p><tr><td>Evil Dead: The Game preview</td><p><td>2022-04-14 17:32:11</td><p><td><img src=".././miniatures/3.jpg"></td><p><td><p class="short">Before I dive into my overall thoughts on the experience and why fans of the franchise and non-fans alike should be excited about this cleverly designed horror game, let's discuss exactly what Evil Dead: The Game is. For those who possibly missed the flashy reveal trailer, Evil Dead: The Game is an asymmetrical horror multiplayer title that pits a cast of iconic characters from the Evil Dead universe against a horrifying player-controlled Kandarian Demon.
+
+You and your squad of four heroes team up to explore sprawling locations from the series, loot fan-favorite weapons like the "Boomstick" and chainsaw hand, and collect key items in the hopes of sealing the breach between worlds and banishing the Kandarian Demon back to hell. Or, if terrorizing other players is more your speed, you can take the role of the Kandarian Demon and try to viciously kill these heroes before they complete their objectives with an assortment of devastating villains like Evil Ash or Henrietta.
+
+Evil Dead: The Game aims to offer loads of replayability for a wide range of player types.
+
+Evil Dead: The Game beautifully combines elements of co-op and PvP into one intense multiplayer offering. However, while a bulk of the game's content revolves around slaying with or simply slaying other players, Evil Dead: The Game also provides an assortment of singleplayer side missions that allow individuals to relive iconic moments from the franchise. The team was careful to stress that these solo missions aren't considered a conventional "campaign," but they wanted to provide more options for meaningful singleplayer gameplay.
+
+With 13 playable heroes, three unique Kandarian Demon archetypes, a healthy assortment of weapons and abilities, and a collection of singleplayer side missions, Evil Dead: The Game aims to offer loads of replayability for a wide range of player types. Considering this is a budget-priced title with the standard edition starting at $40, the suite of game modes and content launching with this package seems genuinely impressive.</p></td><p><td>3</td><p><td><a class="btn" href="./post.php?id=8">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html>Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=8 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=8 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=8 ">Supprimer</a></td><p></tr><p><tr><td>Windows 11 build 22557:</td><p><td>2022-04-14 17:24:11</td><p><td><img src=".././miniatures/2.jpg"></td><p><td><p class="short">icrosoft recently pushed a massive update for Windows 11 (build 22557) in the Dev Channel of the Windows Insider Program with a lot of new features and improvements.
+
+For instance, in this release, the software giant has introduced the ability to create folders in the Start menu. You can once again drag and drop files or drag and pin apps in the Taskbar. This flight also includes a new Live Captions feature. And the "Do not disturb" feature will help you silence notification banners so you can focus on your work.
+
+Furthermore, there is a new way to snap windows. Microsoft is making changes to the default power settings to help reduce power consumption and carbon emissions. The legacy title bars are getting an interface update. There are new touch gestures, a brand-new Task Manager that matches the new modern design language of Windows 11, and a lot more.
+
+Although these are welcome additions, these features are available in the Dev Channel, which means that they are not tied to any specific release of Windows 11. As a result, they are not expected to arrive on any release of Windows. Whenever a feature is ready, the company can choose to roll it out immediately or make it part of the feature set of the next major update. If the feature doesn't meet the company's expectations, then it will never see the light of day.
+
+In addition, since our last preview roundup for build 22523, Microsoft also made available four other previews with various changes, including build 22526, 22543, 22538, 22533, and 22526. Although these preview builds weren't as significant as build 22557, they introduced new features and improvements.</p></td><p><td>1</td><p><td><a class="btn" href="./post.php?id=5">Lire</a></td><p><td><a class="btn btn-success" href="./modifier.html>Editer</a></td><p><td><a class="btn btn-active" href="./activer.php?id=5 ">Activer</a></td><p><td><a class="btn" style="background-color:orange;" href="./desactiver.php?id=5 ">Désactiver</a></td><p><td>1</td><p><td><a class="btn btn-danger" href="./supprimer.php?id=5 ">Supprimer</a></td><p></tr><p>                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>

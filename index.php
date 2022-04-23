@@ -83,7 +83,7 @@ date_default_timezone_set('Europe/Paris');
         <div class="cat4  animate__animated animate__backInDown">
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"><input type="submit" name="cat4" value="Gaming" class="menuInput"></form></div>
         <div class="cat5  animate__animated animate__backInDown">
-          <form action="index.php" method="post"><input type="submit" name="cat5" value="Photos" class="menuInput"></form></div>
+          <form action="index.php" method="post"><input type="submit" name="cat5" value="Software" class="menuInput"></form></div>
         <div class="cat6 animate__animated animate__backInDown" onclick="on()">login</div>
       </nav>
 
